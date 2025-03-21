@@ -24,7 +24,7 @@ const Speakers = () => {
     shootingStar: 'https://ext.same-assets.com/3043395600/3124093549.png',
     balloon: 'https://ext.same-assets.com/4133703346/493755053.png',
     whitePlanet: 'https://ext.same-assets.com/633887910/4018542477.svg+xml',
-    abheekPandoh: 'https://ext.same-assets.com/1204467722/4291056903.png',
+    abheekPandoh: 'https://media.licdn.com/dms/image/v2/D5603AQHJaEaPQ0SS4A/profile-displayphoto-shrink_400_400/B56ZSIIQ3uGoAs-/0/1737450655651?e=1747872000&v=beta&t=erXZ1ktNjF89lLat6hUm92ZV9aR8ujVJm5osqoNUQ7w',
   };
 
   return (
@@ -38,7 +38,7 @@ const Speakers = () => {
           className="mx-auto max-w-6xl"
         >
           <h2 className="mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl">
-            SPEAKERS
+            CHIEF GUEST
           </h2>
 
           <div className="relative mx-auto max-w-3xl">
@@ -95,10 +95,10 @@ const Speakers = () => {
                 </div>
 
                 <div className="text-center md:text-left">
-                  <h3 className="mb-1 text-2xl font-bold text-white md:text-3xl">Dr. Ana Pantelic</h3>
-                  <p className="mb-4 text-purple-300">Director of MIT D-Lab</p>
+                  <h3 className="mb-1 text-2xl font-bold text-white md:text-3xl">Gamaliel Das</h3>
+                  <p className="mb-4 text-purple-300">Web Dev Specialist | 8x Global Hackathon Winner | SIH 2022 🏆 | 2x TNSI Awardee | SIH 2023, SIH 2024 Evaluator</p>
                   <p className="text-sm leading-relaxed text-gray-200 md:text-base">
-                    Dr. Ana Pantelic is the Executive Director of MIT D-Lab, which works with people around the world to develop and advance collaborative approaches and practical solutions to global poverty challenges. Prior to joining MIT, she spent over a decade working at the confluence of systems change, inclusive innovation, and economic opportunity. She is also the founder of LISTA, an award-winning digital solution proven to improve the financial health of nearly a million low-income people across a dozen countries. Dr. Pantelic has previously worked with UNICEF (in Uganda), Fundación Capital (an international social enterprise, in Colombia), and USAID (in Serbia), among others, and holds a PhD in Political Science from the University of Belgrade in her native Serbia.
+                  Gamaliel Das is a distinguished Web Development Specialist, currently serving at Spendflo. He is an 8-time Global Hackathon Winner, Smart India Hackathon (SIH) 2022 Champion, and 2-time Tamil Nadu Student Innovator (TNSI) Awardee. His commitment to fostering innovation is evident through his role as an Evaluator for SIH 2023 and SIH 2024. Beyond his professional achievements, Gamaliel has built a substantial digital presence, amassing over 170,000 followers. His journey reflects a dedication to elevating the importance of hackathons in Tamil Nadu and inspiring the next generation of tech enthusiasts.
                   </p>
                 </div>
               </div>

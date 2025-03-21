@@ -63,70 +63,58 @@ const FAQ = () => {
     general: [
       {
         question: "What is a hackathon?",
-        answer: "Hackathons are events where programmers collaborate together to create new software and hardware projects. While websites and mobile apps are common types of hacks, you are encouraged to build anything your imagination inspires. Reach for the stars!"
+        answer: "Hackathons are events where programmers collaborate together to create innovative AI solutions and projects. While ML models and AI applications are common types of hacks, you are encouraged to build anything your imagination inspires in the field of artificial intelligence!"
       },
       {
-        question: "When is HackMIT?",
-        answer: "Check-in for HackMIT will begin at 8am on Saturday, September 14th and the event will end around 7pm on Sunday, September 15th. If you're arriving early, you can also attend our pre-checkin from 9pm to 11pm on Friday, September 13th. Stay tuned for a more detailed schedule as we get closer to the event!"
+        question: "When is SindhanAI?",
+        answer: "Check-in for SindhanAI will begin at 8am on Saturday, April 19th and the event will end around 7pm on Sunday, April 20th. If you're arriving early, you can also attend our pre-checkin from 9pm to 11pm on Friday, April 18th. Stay tuned for a more detailed schedule as we get closer to the event!"
       },
       {
         question: "What's the cost?",
-        answer: "Admission is free and includes mentors, workshops, food, $wag, resources, and an unforgettable experience!"
+        answer: "The abstract submission round is completely free and conducted online. If your team gets shortlisted for the final 24-hour hackathon, there is a registration fee of ₹550 per participant. This fee covers meals, accommodation, swag, and access to all hackathon resources and events."
       },
       {
         question: "What can I win?",
-        answer: "We offer three general prizes, a beginner prize, and four track prizes! There will also be surprise prizes announced closer to the date — stay tuned for more info. If you're here to just have fun, you'll also get free $wag just by submitting a project."
-      },
-      {
-        question: "But I've never hacked before!",
-        answer: "That's totally okay—we'll be hosting a beginner workshop and will also have beginner mentors available to guide your team through the hackathon process. There will also be beginner prizes available!"
+        answer: "We offer prizes worth ₹60,000 total, Each domain the winner gets ₹20,000, Based on performance there will be consolidation prizes. Even if you're here to just have fun, you'll get free swag just by submitting a project."
       },
     ],
     tracks: [
       {
-        question: "What are hackathon tracks?",
-        answer: "We've developed four tracks, or impact areas, for you to hack in. The top project in each track will be awarded a prize! You will be able to submit your project to at most ONE track to be eligible for that track prize. Submission to tracks is optional this year if you feel like your project doesn't fall into any of the areas — you will still be eligible for other prizes."
+        question: "What are hackathon domains?",
+        answer: "We've developed specialized domains like AI, IoT, Data Analytics. The top project in each domain will be awarded a prize! You can submit your idea to one domain to be eligible for that domain prize."
       },
       {
         question: "Do I have to submit a project if I attend?",
-        answer: "You can attend all our events without submitting a project, but you must submit one to receive your travel reimbursement if eligible!"
+        answer: "Yes, project submission is mandatory for the hackathon. Teams that get shortlisted from the abstract submission round will need to build their proposed solution during the 24-hour hackathon event. The project should align with your submitted abstract and chosen domain."
       }
     ],
     registration: [
       {
         question: "Can I apply?",
-        answer: "If you are a college undergraduate or an MIT M.Eng student, then yes! Note that we consider student status during the fall of 2024, so students who graduated prior to the event are not eligible. In addition, we require all non-MIT participants to be 18 or older by the time of the event."
+        answer: "If you are a college undergraduate from any recognized institution in India, then yes! We welcome students from all backgrounds - whether you're studying computer science, engineering, or any other field with an interest in AI."
       },
       {
         question: "What if I'm no longer eligible? / Can I volunteer to be a judge or mentor?",
-        answer: <>If you're not a high schooler or college undergraduate, you are eligible to judge or mentor at HackMIT 2024! You can find the application <a href="https://go.hackmit.org/mentor-judge" className="text-purple-400 underline hover:text-purple-300">here</a> to be a mentor or a judge.</>
-      },
-      {
-        question: "How do I apply?",
-        answer: "Applications open in mid-June and are due on July 26, with decisions released mid-August. Additionally, the top 50 hackers who complete our admissions puzzle will receive automatic admission to HackMIT!"
+        answer: "If you're an AI professional or have experience in machine learning and artificial intelligence, you can apply to be a mentor or judge at SindhanAI 2025! Application details will be shared soon."
       },
       {
         question: "How do teams work?",
-        answer: "You can form a team of up to 4 people! You'll choose your teammates when you submit a project at HackMIT. If you don't have a team yet, don't worry! We'll have team formation events at the beginning of the weekend geared towards helping you find people to work with. You can also meet new people through our admitted hacker Discord server leading up to our event."
-      },
+        answer: "You can form a team of up to 6 people! You'll choose your teammates when you submit an idea at SindhanAI.  "
+      }
     ],
     logistics: [
       {
-        question: "Can I attend HackMIT virtually?",
-        answer: "Unfortunately, HackMIT is only offered in-person."
+        question: "Can I attend SindhanAI virtually?",
+        answer: "Unfortunately, SindhanAI is only offered in-person to provide the best collaborative AI learning experience."
       },
       {
         question: "Will food be provided?",
-        answer: "Yes, we'll be providing meals from breakfast on Saturday to lunch on Sunday. If you have dietary restrictions, you'll have a chance to let us know when you confirm your spot so we can accommodate them. Of course, we'll also have an abundance of snacks throughout the weekend."
+        answer: "Yes, we'll be providing meals from breakfast on Saturday to lunch on Sunday. We'll accommodate dietary restrictions - just let us know when confirming your spot. There will be plenty of snacks to fuel your AI development throughout the weekend!"
       },
       {
         question: "Will there be overnight accommodations?",
-        answer: "Yes! Hacking all night is fun, but you can also get some rest when you need it. If you indicate in your confirmation form that you live outside the Boston area, we will try our best to match you with an MIT student who will provide a place for you to sleep and shower."
-      },
-      {
-        question: "Where is HackMIT?",
-        answer: <>HackMIT will be held in the <a href="https://goo.gl/maps/pngKVyQRHTrHzyQPA" target="_blank" rel="noreferrer" className="text-purple-400 underline hover:text-purple-300">Johnson Athletic Center</a> on MIT's campus! Check-in for the event will be under the tent on <a href="https://maps.app.goo.gl/yC5yxN6dYVKKBdwi8" target="_blank" rel="noreferrer" className="text-purple-400 underline hover:text-purple-300">Kresge Oval</a>.</>
-      },
+        answer: "Yes! While hacking all night is fun, you can also get some rest when you need it. We will provide accommodation details closer to the event for participants traveling from outside the city."
+      }
     ],
   };
 
@@ -163,7 +151,7 @@ const FAQ = () => {
           </div>
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold">Tracks</h3>
+            <h3 className="mb-4 text-xl font-semibold">Domains</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.tracks.map((item, index) => (
                 <FAQItem key={`tracks-${index}`} question={item.question} answer={item.answer} />

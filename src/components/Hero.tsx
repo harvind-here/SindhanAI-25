@@ -78,13 +78,13 @@ const Hero = () => {
       </div>
 
       {/* Floating elements */}
-      <motion.img
+      {/* <motion.img
         src="https://ext.same-assets.com/1533196759/449212754.png"
         alt="Cloud Stars"
         className="absolute right-[5%] top-[10%] w-16 md:w-32"
         variants={starVariants}
         animate="animate"
-      />
+      /> */}
 
       <motion.img
         src="https://ext.same-assets.com/516636630/2480188535.png"

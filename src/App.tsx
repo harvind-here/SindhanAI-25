@@ -7,6 +7,8 @@ import Speakers from './components/Speakers';
 import FAQ from './components/FAQ';
 import Sponsors from './components/Sponsors';
 import Footer from './components/Footer';
+import ProblemStatement from './components/ProblemStatement';  // Add this import
+
 
 function App() {
   return (
@@ -18,10 +20,11 @@ function App() {
             <>
               <Hero />
               <About />
+              <Speakers />
               <Tracks />
-              {/* <Speakers /> */}
+              <ProblemStatement />  
               <FAQ />
-              {/* <Sponsors /> */}
+              <Sponsors />
             </>
           } />
           {/* Add additional routes if needed */}

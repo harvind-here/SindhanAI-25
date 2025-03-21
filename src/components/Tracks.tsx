@@ -64,11 +64,11 @@ const Tracks = () => {
     <section id="Tracks" className="relative bg-[#1b2131] py-24">
       {/* Pink star wave background */}
       <div className="absolute bottom-0 left-0 right-0 h-40 w-full overflow-hidden">
-        <img
+        {/* <img
           src="https://ext.same-assets.com/3357170121/31085671.png"
           alt="Star Wave"
           className="h-full w-full object-cover"
-        />
+        /> */}
       </div>
 
       <div className="container relative z-10 mx-auto px-4">
@@ -92,7 +92,7 @@ const Tracks = () => {
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
                 whileHover="hover"
-                className="flex flex-col items-center text-center"
+                className="flex flex-col items-center text-center opacity-50"
               >
                 <div className="relative">
                   <img

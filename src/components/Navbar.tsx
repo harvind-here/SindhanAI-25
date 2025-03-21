@@ -28,21 +28,24 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'About', href: '#About' },
-    { name: 'Tracks', href: '#Tracks' },
     { name: 'Speakers', href: '#Speakers' },
+    { name: 'Tracks', href: '#Tracks' },
+    { name: 'Problem Statement', href: '#ProblemStatement' },  
     { name: 'FAQ', href: '#FAQ' },
     { name: 'Sponsors', href: '#Sponsors' },
   ];
 
   return (
     <motion.nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? 'bg-[#1b2131]/90 backdrop-blur-sm' : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      scrolled
+        ? 'bg-gradient-to-b from-[#87CEEB]/70 to-[#ADD8E6]/30 backdrop-blur-sm' 
+        : 'bg-gradient-to-b from-[#87CEEB]/70 to-[#ADD8E6]/30'
+    }`}
+    initial={{ y: -100 }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -66,7 +69,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://plume.hackmit.org"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfzpC7e3lvMC5CdoyBvI1sVhIYXJJqQmMGLXysB_JKctKqK9w/viewform?embedded=true"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 text-sm font-medium text-white transition-all hover:opacity-90"
@@ -137,7 +140,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://plume.hackmit.org"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfzpC7e3lvMC5CdoyBvI1sVhIYXJJqQmMGLXysB_JKctKqK9w/viewform?embedded=true"
             className="mt-4 block rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-2 text-center text-base font-medium text-white hover:opacity-90"
             onClick={() => setMenuOpen(false)}
           >

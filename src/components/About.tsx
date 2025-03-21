@@ -46,29 +46,12 @@ const About = () => {
           </h2>
           <div className="space-y-4 text-lg leading-relaxed">
             <p>
-              SindhanAI is a 24 Hour event where students from around the globe work together to
-              design and build innovative technology projects. As one of the largest hackathons in
-              the world, we welcome over 1,000 talented undergraduate students to our campus each
-              fall.
+            SindhanAI is a 24 Hour event where students from around the country work together to design and build innovative technology projects. As one of the largest hackathons in the country, we welcome over 250 talented undergraduate students to our campus.
             </p>
             <p>
-              This year, SindhanAI will take place on the weekend of September 14–15. Participants
-              will have the opportunity to build, learn, and create technology projects from
-              scratch. Additionally, we offer workshops from sponsors, personalized mentorship, and
-              fun mini-events to allow hackers to take a break from coding.
+            This year, SindhanAI will take place on the weekend of April 19th and 20th. Participants will have the opportunity to build, learn, and create technology projects from scratch.
             </p>
-            <p>
-              Stay updated with our hackathon logistics by subscribing to our newsletter{' '}
-              <a
-                href="https://hackmit.substack.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-purple-400 underline hover:text-purple-300"
-              >
-                here
-              </a>
-              !
-            </p>
+
           </div>
         </motion.div>
       </div>
