@@ -51,7 +51,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="src\TRP-logo-copy.png"
+              src="https://trp.srmtrichy.edu.in/wp-content/uploads/2021/12/TRP-logo-copy.png"
               alt="TRP Logo"
               className="h-20 w-auto" // Adjust height as needed
             />

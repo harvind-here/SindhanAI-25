@@ -154,7 +154,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1 }}
               />
               <div className="mt-2">
-                <div className="text-xl font-bold md:text-2xl">₹ 2 Lakh</div>
+                <div className="text-xl font-bold md:text-2xl">₹60,000</div>
                 <div className="text-sm">prizes</div>
               </div>
             </div>
