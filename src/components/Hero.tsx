@@ -154,12 +154,11 @@ const Hero = () => {
           {/* Stats section */}
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
             <div className="relative">
-              <div className="relative">
+              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
                 <motion.img
                   src="https://ext.same-assets.com/61982440/2869253106.svg+xml"
                   alt="planet1"
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                  whileHover={{ scale: 1.1 }}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-2xl font-bold md:text-3xl">₹60,000</div>
@@ -170,12 +169,11 @@ const Hero = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="relative">
+              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
                 <motion.img
                   src="https://ext.same-assets.com/1645771940/811426858.svg+xml"
                   alt="planet2"
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                  whileHover={{ scale: 1.1 }}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-2xl font-bold md:text-3xl">250+</div>
@@ -186,12 +184,11 @@ const Hero = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="relative">
+              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
                 <motion.img
                   src="https://ext.same-assets.com/1422808050/2836999932.svg+xml"
                   alt="planet3"
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                  whileHover={{ scale: 1.1 }}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-2xl font-bold md:text-3xl">50+</div>
@@ -202,12 +199,11 @@ const Hero = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="relative">
+              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
                 <motion.img
                   src="https://ext.same-assets.com/493208394/2510877119.svg+xml"
                   alt="planet4"
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                  whileHover={{ scale: 1.1 }}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-2xl font-bold md:text-3xl">24</div>
@@ -217,6 +213,28 @@ const Hero = () => {
                 <div className="text-sm">Hours</div>
               </div>
             </div>
+          </div>
+
+          {/* Register button */}
+          <div className="mt-16 flex justify-center">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfzpC7e3lvMC5CdoyBvI1sVhIYXJJqQmMGLXysB_JKctKqK9w/viewform?embedded=true"
+              target="_blank"
+              rel="noreferrer"
+              className="register-button group relative overflow-hidden rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-12 py-4 text-xl font-semibold text-white before:absolute before:left-[-100%] before:top-0 before:h-full before:w-[120%] before:animate-shine before:bg-[linear-gradient(120deg,transparent_10%,rgba(255,255,255,0.5)_30%,transparent_50%)] before:content-[''] after:absolute after:left-[-100%] after:top-0 after:h-full after:w-[120%] after:bg-[linear-gradient(120deg,transparent_10%,rgba(255,255,255,0.8)_30%,transparent_50%)] after:opacity-0 after:content-[''] hover:after:animate-hover-shine hover:scale-105 transition-all duration-300 ease-in-out md:text-2xl md:px-16 md:py-5"
+            >
+              <span className="relative z-10">Register for Free</span>
+              <span className="group-hover:border-rainbow absolute inset-0 rounded-full overflow-hidden">
+                {/* Top border */}
+                <span className="absolute top-0 left-0 w-full h-[6px] bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 -translate-x-full group-hover:animate-rainbow-border-top"></span>
+                {/* Right border */}
+                <span className="absolute top-0 right-0 w-[6px] h-full bg-gradient-to-b from-green-500 via-blue-500 to-indigo-500 -translate-y-full group-hover:animate-rainbow-border-right"></span>
+                {/* Bottom border */}
+                <span className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-indigo-500 via-purple-500 to-red-500 translate-x-full group-hover:animate-rainbow-border-bottom"></span>
+                {/* Left border */}
+                <span className="absolute top-0 left-0 w-[6px] h-full bg-gradient-to-b from-red-500 via-pink-500 to-indigo-500 translate-y-full group-hover:animate-rainbow-border-left"></span>
+              </span>
+            </a>
           </div>
         </motion.div>
       </div>
