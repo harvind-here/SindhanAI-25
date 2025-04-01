@@ -23,22 +23,22 @@ const Tracks = () => {
   const trackList = [
     {
       name: 'Artificial Intelligence',
-      icon: '/src/images/ai-logo.png',
+      icon: '/images/ai-logo.png',
       id: 'ai-track'
     },
     {
       name: 'Data',
-      icon: '/src/images/data-logo.png',
+      icon: '/images/data-logo.png',
       id: 'data-track'
     },
     {
       name: 'Internet of Things',
-      icon: 'src/images/iot-logo.png',
+      icon: '/images/iot-logo.png',
       id: 'iot-track'
     },
     {
       name: 'Open Innovation',
-      icon: 'src/images/open-logo.png',
+      icon: '/images/open-logo.png',
       id: 'open-track'
     }
   ];
