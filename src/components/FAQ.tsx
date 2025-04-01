@@ -43,7 +43,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
 const FAQ = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.25,
   });
 
   const sectionVariants = {
@@ -137,12 +137,12 @@ const FAQ = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="mx-auto max-w-4xl"
         >
-          <h2 className="mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl">
+          <h2 className="section-title mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl continuous-rainbow">
             FAQ
           </h2>
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold">General</h3>
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">General</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.general.map((item, index) => (
                 <FAQItem key={`general-${index}`} question={item.question} answer={item.answer} />
@@ -151,7 +151,7 @@ const FAQ = () => {
           </div>
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold">Domains</h3>
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Domains</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.tracks.map((item, index) => (
                 <FAQItem key={`tracks-${index}`} question={item.question} answer={item.answer} />
@@ -160,7 +160,7 @@ const FAQ = () => {
           </div>
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold">Registration</h3>
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Registration</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.registration.map((item, index) => (
                 <FAQItem key={`registration-${index}`} question={item.question} answer={item.answer} />
@@ -169,7 +169,7 @@ const FAQ = () => {
           </div>
 
           <div>
-            <h3 className="mb-4 text-xl font-semibold">In-Person Logistics</h3>
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">In-Person Logistics</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.logistics.map((item, index) => (
                 <FAQItem key={`logistics-${index}`} question={item.question} answer={item.answer} />

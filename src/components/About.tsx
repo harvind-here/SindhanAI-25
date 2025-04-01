@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.25,
   });
 
   const sectionVariants = {
@@ -41,7 +41,7 @@ const About = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="mx-auto max-w-4xl text-center"
         >
-          <h2 className="mb-8 text-3xl font-bold uppercase tracking-wide md:text-4xl">
+          <h2 className="section-title mb-8 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl continuous-rainbow">
             ABOUT
           </h2>
           <div className="space-y-4 text-lg leading-relaxed">

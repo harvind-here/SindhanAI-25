@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Tracks = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.25,
   });
 
   const sectionVariants = {
@@ -63,8 +63,17 @@ const Tracks = () => {
 
   const handleScrollToTrack = (id: string) => {
     const element = document.getElementById(id);
+    const navbarHeight = 180;
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - navbarHeight,
+        behavior: 'smooth'
+      });
+      // Set the URL hash after scrolling completes
+      setTimeout(() => {
+        window.location.hash = id;
+      }, 100);
     }
   };
 
@@ -87,7 +96,7 @@ const Tracks = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="mx-auto max-w-6xl"
         >
-          <h2 className="mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl">
+          <h2 className="section-title mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl continuous-rainbow">
             TRACKS
           </h2>
 

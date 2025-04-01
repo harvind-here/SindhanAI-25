@@ -27,10 +27,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
+    { name: 'Problem Statements', href: '#ProblemStatement' },
     { name: 'About', href: '#About' },
-    { name: 'Speakers', href: '#Speakers' },
     { name: 'Tracks', href: '#Tracks' },
-    { name: 'Problem Statement', href: '#ProblemStatement' },  
+    { name: 'ChiefGuest', href: '#Speakers' },  
     { name: 'FAQ', href: '#FAQ' },
     { name: 'Sponsors', href: '#Sponsors' },
   ];
@@ -72,7 +72,7 @@ const Navbar = () => {
               href="https://docs.google.com/forms/d/e/1FAIpQLSfzpC7e3lvMC5CdoyBvI1sVhIYXJJqQmMGLXysB_JKctKqK9w/viewform?embedded=true"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 text-sm font-medium text-white transition-all hover:opacity-90"
+              className="apply-button rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white"
             >
               Apply
             </a>
@@ -141,7 +141,7 @@ const Navbar = () => {
           ))}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfzpC7e3lvMC5CdoyBvI1sVhIYXJJqQmMGLXysB_JKctKqK9w/viewform?embedded=true"
-            className="mt-4 block rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-2 text-center text-base font-medium text-white hover:opacity-90"
+            className="apply-button mt-4 block rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-center text-white"
             onClick={() => setMenuOpen(false)}
           >
             Apply

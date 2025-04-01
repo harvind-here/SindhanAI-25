@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.25,
   });
 
   const sectionVariants = {
@@ -145,7 +145,7 @@ const Sponsors = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="mx-auto max-w-6xl"
         >
-          <h2 className="mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl">
+          <h2 className="section-title mb-16 text-center text-3xl font-bold uppercase tracking-wide md:text-4xl continuous-rainbow">
             SPONSORS
           </h2>
 

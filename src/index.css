@@ -37,6 +37,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.section-title {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff0000, #ff69b4, #7b68ee, #00bfff, #00ff7f);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.section-title:hover::after {
+  width: 100px;
+}
+
 section {
   position: relative;
   overflow: hidden;
@@ -81,10 +102,34 @@ section {
   }
 }
 
+@keyframes outlineRainbow {
+  0% { box-shadow: 0 0 0 2px #ff0000; }
+  16.6% { box-shadow: 0 0 0 2px #ff69b4; }
+  33.3% { box-shadow: 0 0 0 2px #7b68ee; }
+  50% { box-shadow: 0 0 0 2px #00bfff; }
+  66.6% { box-shadow: 0 0 0 2px #00ff7f; }
+  83.3% { box-shadow: 0 0 0 2px #ffff00; }
+  100% { box-shadow: 0 0 0 2px #ff0000; }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
 .animate-pulse-slow {
   animation: pulse 4s ease-in-out infinite;
+}
+
+.apply-button {
+  font-weight: 700;
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.apply-button:hover {
+  animation: outlineRainbow 1s linear;
+  transform: scale(1.05);
 }
