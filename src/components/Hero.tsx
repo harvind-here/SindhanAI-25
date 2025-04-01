@@ -92,13 +92,20 @@ const Hero = () => {
         className="absolute right-[20%] top-[30%] w-32 md:w-64"
         variants={planetVariants}
         whileHover="hover"
-        initial={{ rotate: -10 }}
+        initial={{ rotate: -10, scale: 2 }}
         animate={{
           rotate: 10,
+          scale: 1,
           transition: {
-            repeat: Infinity,
-            repeatType: "reverse",
-            duration: 8
+            rotate: {
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 8
+            },
+            scale: {
+              duration: 1.5,
+              ease: "easeOut"
+            }
           }
         }}
       />
@@ -147,51 +154,67 @@ const Hero = () => {
           {/* Stats section */}
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
             <div className="relative">
-              <motion.img
-                src="https://ext.same-assets.com/61982440/2869253106.svg+xml"
-                alt="planet1"
-                className="mx-auto h-24 w-24"
-                whileHover={{ scale: 1.1 }}
-              />
+              <div className="relative">
+                <motion.img
+                  src="https://ext.same-assets.com/61982440/2869253106.svg+xml"
+                  alt="planet1"
+                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
+                  whileHover={{ scale: 1.1 }}
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-2xl font-bold md:text-3xl">₹60,000</div>
+                </div>
+              </div>
               <div className="mt-2">
-                <div className="text-xl font-bold md:text-2xl">₹60,000</div>
-                <div className="text-sm">prizes</div>
+                <div className="text-sm">Prizepool</div>
               </div>
             </div>
             <div className="relative">
-              <motion.img
-                src="https://ext.same-assets.com/1645771940/811426858.svg+xml"
-                alt="planet2"
-                className="mx-auto h-24 w-24"
-                whileHover={{ scale: 1.1 }}
-              />
+              <div className="relative">
+                <motion.img
+                  src="https://ext.same-assets.com/1645771940/811426858.svg+xml"
+                  alt="planet2"
+                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
+                  whileHover={{ scale: 1.1 }}
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-2xl font-bold md:text-3xl">250+</div>
+                </div>
+              </div>
               <div className="mt-2">
-                <div className="text-xl font-bold md:text-2xl">250+</div>
-                <div className="text-sm">undergrads</div>
+                <div className="text-sm">Participants</div>
               </div>
             </div>
             <div className="relative">
-              <motion.img
-                src="https://ext.same-assets.com/1422808050/2836999932.svg+xml"
-                alt="planet3"
-                className="mx-auto h-24 w-24"
-                whileHover={{ scale: 1.1 }}
-              />
+              <div className="relative">
+                <motion.img
+                  src="https://ext.same-assets.com/1422808050/2836999932.svg+xml"
+                  alt="planet3"
+                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
+                  whileHover={{ scale: 1.1 }}
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-2xl font-bold md:text-3xl">50+</div>
+                </div>
+              </div>
               <div className="mt-2">
-                <div className="text-xl font-bold md:text-2xl">50+</div>
                 <div className="text-sm">Colleges</div>
               </div>
             </div>
             <div className="relative">
-              <motion.img
-                src="https://ext.same-assets.com/493208394/2510877119.svg+xml"
-                alt="planet4"
-                className="mx-auto h-24 w-24"
-                whileHover={{ scale: 1.1 }}
-              />
+              <div className="relative">
+                <motion.img
+                  src="https://ext.same-assets.com/493208394/2510877119.svg+xml"
+                  alt="planet4"
+                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
+                  whileHover={{ scale: 1.1 }}
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-2xl font-bold md:text-3xl">24</div>
+                </div>
+              </div>
               <div className="mt-2">
-                <div className="text-xl font-bold md:text-2xl">24</div>
-                <div className="text-sm">hours</div>
+                <div className="text-sm">Hours</div>
               </div>
             </div>
           </div>

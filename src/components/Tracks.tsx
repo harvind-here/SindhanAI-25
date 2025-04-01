@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 
 const Tracks = () => {
   const [ref, inView] = useInView({
@@ -22,23 +23,23 @@ const Tracks = () => {
   const trackList = [
     {
       name: 'Artificial Intelligence',
-      icon: 'https://ext.same-assets.com/1667693671/2787795076.svg+xml',
-      stars: 'https://ext.same-assets.com/2920166731/2318510774.svg+xml',
+      icon: '/src/images/ai-logo.png',
+      id: 'ai-track'
     },
     {
-      name: 'Data Science',
-      icon: 'https://ext.same-assets.com/4098935608/3829011960.svg+xml',
-      stars: 'https://ext.same-assets.com/2461657223/715312986.svg+xml',
+      name: 'Data',
+      icon: '/src/images/data-logo.png',
+      id: 'data-track'
     },
     {
       name: 'Internet of Things',
-      icon: 'https://ext.same-assets.com/1105254230/3142986560.svg+xml',
-      stars: 'https://ext.same-assets.com/3335828367/4272342451.svg+xml',
+      icon: 'src/images/iot-logo.png',
+      id: 'iot-track'
     },
     {
       name: 'Open Innovation',
-      icon: 'https://ext.same-assets.com/1105254230/3142986560.svg+xml',
-      stars: 'https://ext.same-assets.com/3335828367/4272342451.svg+xml',
+      icon: 'src/images/open-logo.png',
+      id: 'open-track'
     }
   ];
 
@@ -58,6 +59,13 @@ const Tracks = () => {
         duration: 0.3,
       },
     },
+  };
+
+  const handleScrollToTrack = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -92,18 +100,14 @@ const Tracks = () => {
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
                 whileHover="hover"
-                className="flex flex-col items-center text-center opacity-50"
+                className="flex flex-col items-center text-center cursor-pointer hover:opacity-100 opacity-80 transition-opacity"
+                onClick={() => handleScrollToTrack(track.id)}
               >
                 <div className="relative">
                   <img
                     src={track.icon}
                     alt={track.name}
                     className="h-32 w-32 object-contain md:h-40 md:w-40"
-                  />
-                  <img
-                    src={track.stars}
-                    alt="Stars"
-                    className="absolute left-0 top-0 h-32 w-32 object-contain opacity-50 md:h-40 md:w-40"
                   />
                 </div>
                 <h3 className="mt-4 text-lg font-medium md:text-xl">{track.name}</h3>

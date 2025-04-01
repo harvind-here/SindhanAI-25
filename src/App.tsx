@@ -19,9 +19,9 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
+              <Tracks />
               <About />
               <Speakers />
-              <Tracks />
               <ProblemStatement />  
               <FAQ />
               <Sponsors />

@@ -46,10 +46,12 @@ const About = () => {
           </h2>
           <div className="space-y-4 text-lg leading-relaxed">
             <p>
-            SindhanAI is a 24 Hour event where students from around the country work together to design and build innovative technology projects. As one of the largest hackathons in the country, we welcome over 250 talented undergraduate students to our campus.
+            SindhanAI is a 24 Hour National-level Hackathon event where participants from around the country work together to design and build innovative technology projects in three major tracks(AI | IoT | Data) conducted in two rounds. Round-1 (online) and Round-2 (Final 24H). 
+            <p>
+            We welcome over top 250 talented techies to our campus for the final round of 24H Hackathon. To be one among them, register your team now and submit the Round-1 ideation before 26th April</p>
             </p>
             <p>
-            This year, SindhanAI will take place on the weekend of April 19th and 20th. Participants will have the opportunity to build, learn, and create technology projects from scratch.
+            This year, SindhanAI will take place on the weekend of May 2nd and 3rd. Participants will have the opportunity to build, learn, and create technology projects.
             </p>
 
           </div>

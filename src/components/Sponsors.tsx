@@ -23,9 +23,9 @@ const Sponsors = () => {
   const sponsors = {
     platinum: [
       {
-        name: 'Sponsor1',
-        logo: 'https://ext.same-assets.com/370670292/500707846.svg+xml',
-        url: 'https://fetch.ai/',
+        name: 'BlackThunder',
+        logo: 'src/images/blackth-logo.png',
+        url: 'https://www.blackthunder.in/',
       },
     ],
     gold: [

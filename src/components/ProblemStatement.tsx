@@ -105,7 +105,7 @@ const ProblemStatement = () => {
             PROBLEM STATEMENTS
           </h2>
 
-          <div className="mb-12">
+          <div className="mb-12" id="ai-track">
             <h3 className="mb-4 text-xl font-semibold">Artificial Intelligence</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {problemStatements.ai.map((item, index) => (
@@ -114,7 +114,7 @@ const ProblemStatement = () => {
             </div>
           </div>
 
-          <div className="mb-12">
+          <div className="mb-12" id="iot-track">
             <h3 className="mb-4 text-xl font-semibold">Internet of Things</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {problemStatements.iot.map((item, index) => (
@@ -123,7 +123,7 @@ const ProblemStatement = () => {
             </div>
           </div>
 
-          <div className="mb-12">
+          <div className="mb-12" id="data-track">
             <h3 className="mb-4 text-xl font-semibold">Data Analysis</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {problemStatements.dataAnalysis.map((item, index) => (
@@ -133,6 +133,16 @@ const ProblemStatement = () => {
                   description={item.description}
                 />
               ))}
+            </div>
+          </div>
+          
+          <div className="mb-12" id="open-track">
+            <h3 className="mb-4 text-xl font-semibold">Open Innovation</h3>
+            <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
+              <ProblemItem 
+                title="Open Innovation Track" 
+                description="Create innovative solutions that address real-world challenges. This track is open to any technology or approach. Projects will be judged on creativity, impact, and technical implementation." 
+              />
             </div>
           </div>
         </motion.div>
