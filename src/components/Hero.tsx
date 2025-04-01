@@ -8,7 +8,7 @@ const Hero = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date('2025-04-19T00:00:00');  // Changed to April 19th, 2025
+    const targetDate = new Date('2025-05-02T00:00:00');  // Changed to April 19th, 2025
 
     const interval = setInterval(() => {
       const now = new Date();
