@@ -62,44 +62,64 @@ const FAQ = () => {
   const faqData = {
     general: [
       {
-        question: "What is a hackathon?",
-        answer: "Hackathons are events where programmers collaborate together to create innovative AI solutions and projects. While ML models and AI applications are common types of hacks, you are encouraged to build anything your imagination inspires in the field of artificial intelligence!"
+        question: " What is Sindanai'25?",
+        answer: " Sindanai'25 is a national-level innovation challenge aimed at fostering creative solutions in technology, engineering, and social impact domains. It provides a platform for students and professionals to showcase their problem-solving skills."
       },
       {
-        question: "When is SindhanAI?",
-        answer: "Check-in for SindhanAI will begin at 8am on Saturday, April 19th and the event will end around 7pm on Sunday, April 20th. If you're arriving early, you can also attend our pre-checkin from 9pm to 11pm on Friday, April 18th. Stay tuned for a more detailed schedule as we get closer to the event!"
+        question: "Who can participate in Sindanai'25?",
+        answer: "The event is open to students, research scholars, and working professionals who are passionate about innovation and problem-solving."
       },
       {
-        question: "What's the cost?",
-        answer: "The abstract submission round is completely free and conducted online. If your team gets shortlisted for the final 24-hour hackathon, there is a registration fee of ₹550 per participant. This fee covers meals, accommodation, swag, and access to all hackathon resources and events."
+        question: "Is there any registration fee?",
+        answer: "Registration is free for the first round. However, if you get selected, you will have to pay a participation fee."
       },
       {
-        question: "What can I win?",
-        answer: "We offer prizes worth ₹60,000 total, Each domain the winner gets ₹20,000, Based on performance there will be consolidation prizes. Even if you're here to just have fun, you'll get free swag just by submitting a project."
+        question: "What are the different tracks or domains covered in the event?",
+        answer: "Sindanai'25 focuses on AI, IoT, Data Analytics, App Development, and 3D Modelling (SolidWorks, AutoCAD, KiCad for electronics)."
+      },
+      {
+        question: " Will there be any prizes or rewards?",
+        answer: "  Yes! The prize pool for Sindanai'25 is around ₹60,000."
       },
     ],
     tracks: [
       {
-        question: "What are hackathon domains?",
-        answer: "We've developed specialized domains like AI, IoT, Data Analytics. The top project in each domain will be awarded a prize! You can submit your idea to one domain to be eligible for that domain prize."
+        question: "How can I register for Sindanai'25?",
+        answer: "Registration details will be provided on the official event website. Participants can sign up individually or as a team."
       },
       {
-        question: "Do I have to submit a project if I attend?",
-        answer: "Yes, project submission is mandatory for the hackathon. Teams that get shortlisted from the abstract submission round will need to build their proposed solution during the 24-hour hackathon event. The project should align with your submitted abstract and chosen domain."
-      }
+        question: "Can we participate as a team? If yes, what is the team size limit?",
+        answer: "Yes, team participation is allowed. The team size should be between 4 to 6 members."
+      },
+      {
+        question: "What is the mode of the event? Will it be online or offline?",
+        answer: "Sindanai'25 is an offline event."
+      },
+      {
+        question: "How will the evaluation process be conducted?",
+        answer: " A panel of industry experts and academicians will assess the projects based on innovation, feasibility, and impact."
+      },
+      {
+        question: "Are mentorship and resources provided for participants?",
+        answer: " Yes, mentorship will be provided to help participants develop their projects effectively."
+      },
     ],
     registration: [
       {
-        question: "Can I apply?",
-        answer: "If you are a college undergraduate from any recognized institution in India, then yes! We welcome students from all backgrounds - whether you're studying computer science, engineering, or any other field with an interest in AI."
+        question: "What is the format for project submissions?",
+        answer: "Participants must submit a PowerPoint presentation (PPT) and a Proof of Concept (PoC) if applicable."
       },
       {
-        question: "What if I'm no longer eligible? / Can I volunteer to be a judge or mentor?",
-        answer: "If you're an AI professional or have experience in machine learning and artificial intelligence, you can apply to be a mentor or judge at SindhanAI 2025! Application details will be shared soon."
+        question: "Will participants get access to any development kits or tools?",
+        answer: "Yes, participants will get access to development boards for their projects."
       },
       {
-        question: "How do teams work?",
-        answer: "You can form a team of up to 6 people! You'll choose your teammates when you submit an idea at SindhanAI.  "
+        question: "What happens if I face technical difficulties during the event?",
+        answer: "A dedicated support team will be available to assist participants with any issues."
+      },
+      {
+        question: " Can we submit projects that have been worked on before?",
+        answer: " No, this is a 24-hour hackathon, and all projects must be developed during the event itself."
       }
     ],
     logistics: [
@@ -151,7 +171,7 @@ const FAQ = () => {
           </div>
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Domains</h3>
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Event & Participation FAQs   </h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.tracks.map((item, index) => (
                 <FAQItem key={`tracks-${index}`} question={item.question} answer={item.answer} />
@@ -160,7 +180,8 @@ const FAQ = () => {
           </div>
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Registration</h3>
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Technical & Submission FAQs </h3>
+            
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.registration.map((item, index) => (
                 <FAQItem key={`registration-${index}`} question={item.question} answer={item.answer} />
@@ -168,14 +189,14 @@ const FAQ = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">In-Person Logistics</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.logistics.map((item, index) => (
                 <FAQItem key={`logistics-${index}`} question={item.question} answer={item.answer} />
               ))}
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>
