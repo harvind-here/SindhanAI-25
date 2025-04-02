@@ -18,13 +18,13 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Hero />
-              <Tracks />
-              <About />
-              <Speakers />
-              <ProblemStatement />  
-              <FAQ />
-              <Sponsors />
+              <Hero/>
+              <Tracks/>
+              <About/>
+              <ProblemStatement/> 
+              <Speakers/>
+              <Sponsors/>
+              <FAQ/>
             </>
           } />
           {/* Add additional routes if needed */}

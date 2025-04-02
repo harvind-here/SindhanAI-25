@@ -161,11 +161,11 @@ const Hero = () => {
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-2xl font-bold md:text-3xl">₹60,000</div>
+                  <div className="text-2xl font-bold md:text-3xl">₹60K</div>
                 </div>
               </div>
               <div className="mt-2">
-                <div className="text-sm">Prizepool</div>
+                <div className="text-md font-bold">Prizepool</div>
               </div>
             </div>
             <div className="relative">
@@ -176,11 +176,11 @@ const Hero = () => {
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-2xl font-bold md:text-3xl">250+</div>
+                  <div className="text-3xl font-bold md:text-3xl">250+</div>
                 </div>
               </div>
               <div className="mt-2">
-                <div className="text-sm">Participants</div>
+                <div className="text-md font-bold">Participants</div>
               </div>
             </div>
             <div className="relative">
@@ -195,7 +195,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="mt-2">
-                <div className="text-sm">Colleges</div>
+                <div className="text-md font-bold">Colleges</div>
               </div>
             </div>
             <div className="relative">
@@ -206,11 +206,11 @@ const Hero = () => {
                   className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-2xl font-bold md:text-3xl">24</div>
+                  <div className="text-2xl font-bold md:text-3xl">24H</div>
                 </div>
               </div>
               <div className="mt-2">
-                <div className="text-sm">Hours</div>
+                <div className="text-md font-bold">Time</div>
               </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ const Sponsors = () => {
     platinum: [
       {
         name: 'BlackThunder',
-        logo: 'src/images/blackth-logo.png',
+        logo: 'images/blackth-logo.png',
         url: 'https://www.blackthunder.in/',
       },
     ],
