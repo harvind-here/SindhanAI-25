@@ -36,7 +36,7 @@ const Hero = () => {
   // Effect for text transformation (typing/backspacing)
   useEffect(() => {
     const typingSpeed = 150; // Speed of typing
-    const deletingSpeed = 100; // Speed of backspacing
+    const deletingSpeed = 150; // Speed of backspacing
     const pauseDuration = 1500; // Pause before switching text or starting delete
 
     const handleTyping = () => {

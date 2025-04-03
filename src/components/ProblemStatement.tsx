@@ -178,128 +178,128 @@ const [ref, inView] = useInView({
   const problemStatements = {
     ai: [
       {
-        title: "The PC Agent",
+        title: "AI01: The PC Agent",
         description: "A personal AI assistant that automates computing tasks such as file organization, scheduling, and system maintenance. It optimizes workflow efficiency by integrating with various applications, streamlining repetitive tasks, and providing intelligent recommendations. The expected outcome is a seamless, AI-driven personal computing experience that enhances productivity and reduces manual effort."
       },
       {
-        title: "Tax auditor Agent",
+        title: "AI02: Tax auditor Agent",
         description: "An AI-driven system that automates tax filing and auditing by gathering financial data, ensuring compliance, and generating accurate tax returns. It streamlines the entire tax preparation process by validating records, identifying deductions, and flagging inconsistencies. The outcome is a fully automated tax filing experience with reduced errors, improved compliance, and minimal manual intervention."
       },
       {
-        title: "LLM based vocal support for the Disabled",
+        title: "AI03: LLM based vocal support for the Disabled",
         description: "A language model-powered voice assistant designed to assist individuals with disabilities in communication and daily tasks. It converts speech to text, provides real-time transcription, and enables intelligent voice interactions. The expected outcome is improved accessibility, allowing users to navigate digital environments, compose messages, and interact with systems more effectively."
       },
       {
-        title: "Real time AI Video Commentry",
+        title: "AI04: Real time AI Video Commentry",
         description: "An AI system that generates live commentary on video content in real time, providing insights, context, and analysis. It can be used in sports, entertainment, and educational contexts, delivering relevant information and enhancing the viewer experience. The outcome is an intelligent, context-aware commentary system that adapts dynamically to the content being streamed."
       },
       {
-        title: "AI Meeting Summarizer",
+        title: "AI05: AI Meeting Summarizer",
         description: "An AI tool that automatically transcribes and summarizes meetings, highlighting key points, decisions, and action items. It ensures that participants can quickly review discussions without going through lengthy recordings or notes. The expected outcome is improved efficiency in meeting management, better follow-up on action points, and enhanced documentation."
       },
       {
-        title: "Fake News Detection Plugin",
+        title: "AI06: Fake News Detection Plugin",
         description: "A browser or social media plugin that uses AI to detect misinformation and verify the credibility of news articles. It analyzes sources, cross-references data, and provides reliability scores to help users distinguish between factual and misleading content. The outcome is a more informed online audience, reduced spread of misinformation, and increased trust in news consumption."
       },
       {
-        title: "Intelligent Email Management",
+        title: "AI07: Intelligent Email Management",
         description: "Prioritize, Summarize, Draft Replies, An AI-powered system that categorizes, prioritizes, and responds to emails based on urgency and context. It filters spam, extracts key information, and suggests automated responses, reducing inbox clutter. The expected outcome is a more organized, efficient email workflow that minimizes manual effort and improves response time."
       },
       {
-        title: "AI Database Manager",
+        title: "AI08: AI Database Manager",
         description: "An intelligent database management system that automates query optimization, data indexing, and system maintenance. It ensures efficient data retrieval, detects inconsistencies, and provides predictive analytics. The outcome is improved database performance, reduced maintenance overhead, and enhanced data integrity."
       },
       {
-        title: "Customer Review Analyzer",
+        title: "AI09: Customer Review Analyzer",
         description: "Detailed analysis and report takeaways, An AI system that processes and analyzes customer reviews to extract sentiment, trends, and actionable insights. It categorizes feedback, detects common issues, and helps businesses understand customer sentiment. The expected outcome is improved decision-making for businesses, better customer engagement, and enhanced product or service improvements."
       },
       {
-        title: "Spam Message Detector",
+        title: "AI10: Spam Message Detector",
         description: "An AI-based tool that identifies and filters out spam messages in emails, social media, and messaging apps. It detects fraudulent patterns, phishing attempts, and unwanted advertisements, reducing security risks. The outcome is a cleaner, safer communication experience with minimized distractions and threats. Overcome the limitations of conventional spam filtering."
       }
     ],
     iot: [
       {
-        title: "IoT-Enabled Wearable for Blood Glucose Monitoring",
+        title: "IOT01: IoT-Enabled Wearable for Blood Glucose Monitoring",
         description: "A continuous, non-invasive glucose monitoring system using optical sensors that transmit real-time readings to a mobile app for tracking and alerts."
       },
       {
-        title: "Adaptive IoT-Integrated Prosthetics",
+        title: "IOT02: Adaptive IoT-Integrated Prosthetics",
         description: "Smart prosthetic limbs equipped with sensors to monitor pressure, movement, and comfort, providing real-time feedback for better usability."
       },
       {
-        title: "IoT-Based ICU Patient Monitoring System",
+        title: "IOT03: IoT-Based ICU Patient Monitoring System",
         description: "A centralized system for monitoring vitals like heart rate, oxygen levels, and temperature, sending real-time alerts to doctors via an app."
       },
       {
-        title: "Wearable Fall Detection System for Elderly",
+        title: "IOT04: Wearable Fall Detection System for Elderly",
         description: "A wearable device that detects falls and automatically notifies caregivers or emergency services via an app."
       },
       {
-        title: "IoT System for Medicine Quality Monitoring",
+        title: "IOT05: IoT System for Medicine Quality Monitoring",
         description: "A system that ensures hospital pharmacy medicine quality by monitoring temperature, humidity, and expiry data in real-time."
       },
       {
-        title: "Wearable EEG Monitoring for Neurological Disorders",
+        title: "IOT06: Wearable EEG Monitoring for Neurological Disorders",
         description: "A head-mounted device that tracks brain activity and provides early warnings for epilepsy or Parkinson’s disease."
       },
       {
-        title: "IoT-Based Neonatal Health Monitoring System",
+        title: "IOT07: IoT-Based Neonatal Health Monitoring System",
         description: "A low-cost system for rural areas that continuously monitors neonatal vitals and sends data to healthcare centers."
       },
       {
-        title: "IoT-Integrated Rehabilitation Device",
+        title: "IOT08: IoT-Integrated Rehabilitation Device",
         description: "A smart rehabilitation system that tracks patient progress using IoT sensors and provides data-driven recovery plans."
       },
       {
-        title: "Smart Pill Dispenser with IoT Integration",
+        title: "IOT09: Smart Pill Dispenser with IoT Integration",
         description: "An automated pill dispenser that reminds patients to take medication on time and tracks adherence."
       },
       {
-        title: "IoT-Based Voice-Controlled Agent System",
+        title: "IOT10: IoT-Based Voice-Controlled Agent System",
         description: " A voice-controlled automation system that enables seamless interaction with smart devices in a specified environment."
       },
       {
-        title: "Indoor Mapping using Wi-Fi and Communication Protocols",
+        title: "IOT11: Indoor Mapping using Wi-Fi and Communication Protocols",
         description: "A system that maps indoor environments using Wi-Fi and communication protocols for navigation and tracking."
       }
       
     ],
     dataAnalysis: [
       {
-        title: "Traffic Management",
+        title: "DA01: Traffic Management",
         description: "To use data analytics to analyze traffic patterns, identify congestion hotspots, and optimize traffic management strategies to reduce congestion, travel time, and environmental impact."
       },
       {
-        title: "Healthcare analytics",
+        title: "DA02: Healthcare analytics",
         description: "To apply data analytics for monitoring patient health records, predicting disease risks, and optimizing hospital resource allocation to enhance patient care and reduce operational costs."
       },
       {
-        title: "Socialmedia Analytics",
+        title: "DA03: Socialmedia Analytics",
         description: "To apply data analytics for analyzing social media trends, tracking brand sentiment, and optimizing engagement strategies to enhance online presence and customer satisfaction"
       },
       {
-        title: "Environment Analytics",
+        title: "DA04: Environment Analytics",
         description: "To use data analytics for monitoring air quality, tracking climate change trends, and optimizing energy consumption to reduce environmental impact and promote sustainability."
       },
       {
-        title: "Cyber security Analytics",
+        title: "DA05: Cyber security Analytics",
         description: "To use data analytics for detecting security threats, analyzing network vulnerabilities, and optimizing cybersecurity protocols to prevent data breaches and ensure digital safety."
       },
       {
-        title: "Financial analytics",
+        title: "DA06: Financial analytics",
         description: "To leverage data analytics for detecting fraudulent transactions, analyzing spending patterns, and optimizing investment strategies to enhance financial security and profitability."
       },
       {
-        title: "Disaster Prediction",
+        title: "DA07: Disaster Prediction",
         description: "Develop a predictive model using satellite imagery and environmental datasets to identify high-risk areas for landslides and floods."
       },
       {
-        title: "Budget Analysis",
+        title: "DA08: Budget Analysis",
         description: "To develop a model that predicts a man's spending habits across different lifestyle changes and budget optimization which influence government tax revenues."
       },
       {
-        title: "Business analytics",
+        title: "DA09: Business analytics",
         description: "To use data analytics for segmenting customers, analyzing purchasing behavior, and optimizing marketing strategies to improve customer engagement and maximize revenue."
       }
     ]
@@ -330,17 +330,6 @@ const [ref, inView] = useInView({
             </div>
           </div>
 
-          <div className="mb-12" id="iot-track">
-            <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'iot-track' ? 'animate-rainbow' : ''}`}>
-              Internet of Things
-            </h3>
-            <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
-              {problemStatements.iot.map((item, index) => (
-                <ProblemItem key={`iot-${index}`} title={item.title} description={item.description} />
-              ))}
-            </div>
-          </div>
-
           <div className="mb-12" id="data-track">
             <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'data-track' ? 'animate-rainbow' : ''}`}>
               Data Analysis
@@ -356,6 +345,17 @@ const [ref, inView] = useInView({
             </div>
           </div>
           
+          <div className="mb-12" id="iot-track">
+            <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'iot-track' ? 'animate-rainbow' : ''}`}>
+              Internet of Things
+            </h3>
+            <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
+              {problemStatements.iot.map((item, index) => (
+                <ProblemItem key={`iot-${index}`} title={item.title} description={item.description} />
+              ))}
+            </div>
+          </div>
+
           <div className="mb-12" id="open-track">
             <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'open-track' ? 'animate-rainbow' : ''}`}>
               Open Innovation
