@@ -2,6 +2,11 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const texts = ["SindhanAI'25", "சிந்தனை'25"];
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -27,6 +32,44 @@ const Hero = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Effect for text transformation (typing/backspacing)
+  useEffect(() => {
+    const typingSpeed = 150; // Speed of typing
+    const deletingSpeed = 100; // Speed of backspacing
+    const pauseDuration = 1500; // Pause before switching text or starting delete
+
+    const handleTyping = () => {
+      const currentText = texts[textIndex];
+      if (isDeleting) {
+        // Handle deleting
+        if (charIndex > 0) {
+          setDisplayedText(currentText.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          // Finished deleting
+          setIsDeleting(false);
+          setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          // Pause before typing next text
+          setTimeout(() => {}, pauseDuration / 2); // Short pause after deleting
+        }
+      } else {
+        // Handle typing
+        if (charIndex < currentText.length) {
+          setDisplayedText(currentText.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          // Finished typing, pause then start deleting
+          setTimeout(() => setIsDeleting(true), pauseDuration);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, textIndex, texts]);
+
 
   const formatTime = (time: number) => {
     return time.toString().padStart(2, '0');
@@ -126,9 +169,10 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-3xl"
         >
-          <div className="relative mb-4 inline-block">
+          <div className="relative mb-4 inline-block h-16 md:h-24 flex items-center justify-center min-w-[300px] md:min-w-[500px]"> {/* Added fixed height, flex centering, and min-width */}
             <h1 className="text-4xl font-bold text-gray-400 md:text-6xl relative overflow-hidden">
-              SindhanAI'25
+              {displayedText}
+              <span className="absolute right-0 top-0 bottom-0 w-1 bg-gray-400 animate-pulse"></span> {/* Blinking cursor */}
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-diagonal-shine"></span>
             </h1>
           </div>

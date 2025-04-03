@@ -129,10 +129,10 @@ const ProblemItem = ({ title, description }: ProblemItemProps) => {
 };
 
 const ProblemStatement = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.25,
-  });
+const [ref, inView] = useInView({
+  triggerOnce: false,
+  threshold: 0.1, // Reduced threshold for earlier trigger
+});
 
   const [activeTrack, setActiveTrack] = useState<string | null>(null);
 
