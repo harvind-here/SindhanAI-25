@@ -126,8 +126,13 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-3xl"
         >
-          <h1 className="mb-4 text-4xl font-bold md:text-6xl">SindhanAI'25</h1>
-          <h2 className="mb-12 text-xl md:text-3xl">02.05 - 03.05</h2>
+          <div className="relative mb-4 inline-block">
+            <h1 className="text-4xl font-bold text-gray-400 md:text-6xl relative overflow-hidden">
+              SindhanAI'25
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-diagonal-shine"></span>
+            </h1>
+          </div>
+          <h2 className="mb-12 text-xl md:text-3xl">MAY 2nd & MAY 3rd</h2>
 
           <div className="mb-16">
             <h3 className="mb-4 text-lg font-semibold md:text-xl">Blast Off In</h3>
