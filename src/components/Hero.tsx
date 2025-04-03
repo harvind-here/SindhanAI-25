@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
-  const texts = ["SindhanAI'25", "சிந்தனை'25"];
+  const texts = ["SindhanAI'25", "சிந்தனை'25", "సింధానై'25", "सिंधनै'25","സിന്ദനായി'25", "ಸಿಂಧನೈ'25"];
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
