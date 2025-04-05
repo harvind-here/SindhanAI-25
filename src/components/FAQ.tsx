@@ -75,17 +75,17 @@ const FAQ = () => {
       },
       {
         question: "What are the different tracks or domains covered in the event?",
-        answer: "Sindanai'25 focuses on AI, IoT, Data Analytics, App Development, and 3D Modelling (SolidWorks, AutoCAD, KiCad for electronics)."
+        answer: "Sindanai'25 focuses on AI, IoT, Data Analytics. Participants can choose their own problem statement provided their idea comes under tracks(AI or IoT)."
       },
       {
         question: " Will there be any prizes or rewards?",
-        answer: "  Yes! The prize pool for Sindanai'25 is around ₹60,000."
+        answer: "Yes! The prize pool for Sindanai'25 is around ₹60,000. Winners will receive cash prizes, certificates, if notable performance observed during hacakthon, one may recieve consolidation prize too."
       },
     ],
     tracks: [
       {
         question: "How can I register for Sindanai'25?",
-        answer: "Registration details will be provided on the official event website. Participants can sign up individually or as a team."
+        answer: "Click the 'Register' button in website, which will direct you to a form, fill it and wait for confirmation mail. Participants can register as a team upto 6 members(including leader)."
       },
       {
         question: "Can we participate as a team? If yes, what is the team size limit?",
@@ -93,25 +93,25 @@ const FAQ = () => {
       },
       {
         question: "What is the mode of the event? Will it be online or offline?",
-        answer: "Sindanai'25 is an offline event."
+        answer: "The Round 1 of Sindanai'25 is an online round, where your ideas are evaluated by dedicated technical teams. Upon shortlisting for Round 2, conducted as 24H hackathon offline event at SRMTRPEC, Tiruchirappalli."
       },
       {
-        question: "How will the evaluation process be conducted?",
-        answer: " A panel of industry experts and academicians will assess the projects based on innovation, feasibility, and impact."
+        question: "How will the evaluation process be conducted in Final Round?",
+        answer: " A panel of industry experts and academicians will assess the projects."
       },
       {
         question: "Are mentorship and resources provided for participants?",
-        answer: " Yes, mentorship will be provided to help participants develop their projects effectively."
+        answer: "Guidance and basic technical support will be available during the hackathon. IoT participants will be provided with generic components, if you are planning to use specific component, it is advised to bring it yourself."
       },
     ],
     registration: [
       {
         question: "What is the format for project submissions?",
-        answer: "Participants must submit a PowerPoint presentation (PPT) and a Proof of Concept (PoC) if applicable."
+        answer: "Participants must submit a PowerPoint presentation (PPT) and a Proof of Concept (PoC) and any supporting document if applicable, which then reviewed for getting shortlisted for the final round."
       },
       {
         question: "Will participants get access to any development kits or tools?",
-        answer: "Yes, participants will get access to development boards for their projects."
+        answer: "Yes, IoT participants will be provided with generic components, if you are planning to use specific component, it is advised to bring it yourself. AI and DataAnalytics participants are provided with systems, If you are planning to train any models, you are advised to bring your own laptop."
       },
       {
         question: "What happens if I face technical difficulties during the event?",
@@ -119,21 +119,21 @@ const FAQ = () => {
       },
       {
         question: " Can we submit projects that have been worked on before?",
-        answer: " No, this is a 24-hour hackathon, and all projects must be developed during the event itself."
+        answer: " No, this is a 24-hour hackathon, and all projects must be developed during the event itself. Unless your prject is in the ideation stage and align with any tracks."
       }
     ],
     logistics: [
       {
         question: "Can I attend SindhanAI virtually?",
-        answer: "Unfortunately, SindhanAI is only offered in-person to provide the best collaborative AI learning experience."
+        answer: "Unfortunately, SindhanAI is only offered in-person to provide the best collaborative AI learning experience. However, the first round is online, so you can participate from anywhere."
       },
       {
         question: "Will food be provided?",
-        answer: "Yes, we'll be providing meals from breakfast on Saturday to lunch on Sunday. We'll accommodate dietary restrictions - just let us know when confirming your spot. There will be plenty of snacks to fuel your AI development throughout the weekend!"
+        answer: "Yes, Participants will be provided with refreshments/snacks from time to time at free of cost. Besides that, food stalls and cafeterias will be made available for breakfast, lunch and dinner."
       },
       {
         question: "Will there be overnight accommodations?",
-        answer: "Yes! While hacking all night is fun, you can also get some rest when you need it. We will provide accommodation details closer to the event for participants traveling from outside the city."
+        answer: "Yes, based on the accomodation demanding participants further details will be notified when they get shortlisted."
       }
     ],
   };

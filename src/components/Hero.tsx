@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Globe from './Globe';
-import StarBackground from './StarBackground';
+// Removed StarBackground import
 
 interface RippleState {
   isAnimating: boolean;
@@ -83,6 +83,26 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, textIndex, texts]);
 
+  // Effect to trigger ripple animation sequentially on initial load
+  useEffect(() => {
+    const delay = 700; // 0.7 seconds delay
+    const timeouts: NodeJS.Timeout[] = [];
+
+    rippleStates.forEach((_, index) => {
+      const timeoutId = setTimeout(() => {
+        handleRipple(index);
+      }, index * delay);
+      timeouts.push(timeoutId);
+    });
+
+    // Cleanup function to clear timeouts if the component unmounts
+    return () => {
+      timeouts.forEach(clearTimeout);
+      // Also reset animation states if unmounting mid-animation
+      setRippleStates(prev => prev.map(() => ({ isAnimating: false })));
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   const formatTime = (time: number) => {
     return time.toString().padStart(2, '0');
   };
@@ -129,13 +149,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden pt-24" id="hero">
-      <div className="absolute inset-0 bg-black">
-        <StarBackground />
+      {/* Background container - set z-index here */}
+      {/* Removed StarBackground component usage */}
+      <div className="absolute inset-0 bg-black z-0">
+        {/* StarBackground removed */}
       </div>
       
-      {/* Floating elements */}
+      {/* Floating elements - ensure Globe is above background */}
       <div
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none z-1"
         style={{
           width: '1500px',
           height: '1500px',

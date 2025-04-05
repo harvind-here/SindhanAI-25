@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
     "@tsparticles/engine": "^3.8.1",
     "@types/three": "^0.175.0",
     "framer-motion": "^12.5.0",

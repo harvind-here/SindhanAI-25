@@ -12,7 +12,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="mb-4 flex items-center justify-center">
-            <span className="mr-2">Made with</span>
+            <span className="mr-2">MaDe WiTh</span>
             <motion.span
               animate={{
                 scale: [1, 1.2, 1],
@@ -28,22 +28,21 @@ const Footer = () => {
             <span className="ml-2">
               by the{' '}
               <a
-                href="https://archive.hackmit.org/"
+                href="_about"
                 target="_blank"
                 rel="noreferrer"
                 className="text-purple-400 hover:text-purple-300"
               >
-                HackMIT Team
+              Team SindhanAI'25
               </a>
             </span>
           </div>
           <p className="text-sm text-gray-400">
-            Copyright © {currentYear} HackMIT | Code Released under MIT license
+            Copyright © {currentYear} SRMTRPEC. All rights reserved.
           </p>
 
           {/* Hidden credit for clone - comment this out in real production */}
           <p className="mt-4 text-xs text-gray-600">
-            This is a clone created for educational purposes only. All rights belong to the original creators.
           </p>
         </motion.div>
       </div>
