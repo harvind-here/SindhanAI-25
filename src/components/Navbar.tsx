@@ -26,6 +26,21 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault();
+    const targetId = href.substring(1); // Remove the '#'
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop;
+      window.scrollTo({
+        top: offsetTop, // Adjust if you have a fixed header offset
+        behavior: 'smooth',
+      });
+    }
+    setMenuOpen(false); // Close menu after clicking
+  };
+
   const navLinks = [
     { name: 'Problem Statements', href: '#ProblemStatement' },
     { name: 'About', href: '#About' },
@@ -144,7 +159,7 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700"
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.name}
             </a>
