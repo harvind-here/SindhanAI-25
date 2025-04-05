@@ -28,17 +28,29 @@ const Navbar = () => {
 
   const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     event.preventDefault();
-    const targetId = href.substring(1); // Remove the '#'
+    const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
+    const isMobile = window.innerWidth < 768; // Check if on mobile
 
     if (targetElement) {
-      const offsetTop = targetElement.offsetTop;
-      window.scrollTo({
-        top: offsetTop, // Adjust if you have a fixed header offset
-        behavior: 'smooth',
-      });
+      // Close menu before scrolling on mobile
+      if (isMobile) {
+        setMenuOpen(false);
+      }
+
+      // Calculate offset based on device type
+      const navbarHeight = isMobile ? 80 : 100; // Adjust these values based on your navbar height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      // Use setTimeout to ensure menu close animation completes before scrolling
+      setTimeout(() => {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, isMobile ? 300 : 0); // Add small delay on mobile for menu animation
     }
-    setMenuOpen(false); // Close menu after clicking
   };
 
   const navLinks = [
