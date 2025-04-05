@@ -170,7 +170,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-3xl"
         >
-          <div className="relative mb-4 inline-block h-16 md:h-24 flex items-center justify-center min-w-[300px] md:min-w-[500px]"> {/* Added fixed height, flex centering, and min-width */}
+          <div className="relative mb-4 h-16 md:h-24 flex items-center justify-center min-w-[300px] md:min-w-[500px]"> {/* Added fixed height, flex centering, and min-width */}
             <h1 className="text-4xl font-bold text-gray-400 md:text-6xl relative overflow-hidden">
               {displayedText}
               <span className="absolute right-0 top-0 bottom-0 w-1 bg-gray-400 animate-pulse"></span> {/* Blinking cursor */}
