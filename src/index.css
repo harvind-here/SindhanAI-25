@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  background-color: #1b2131;
+  background-color: black;
   color: white;
   overflow-x: hidden;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1b2131;
+  background: rgb(99, 99, 99);
 }
 
 ::-webkit-scrollbar-thumb {

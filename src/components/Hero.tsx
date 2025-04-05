@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Globe from './Globe';
+import StarBackground from './StarBackground';
+
+interface RippleState {
+  isAnimating: boolean;
+}
 
 const Hero = () => {
   const texts = ["SindhanAI'25", "சிந்தனை'25", "సింధానై'25", "सिंधनै'25","സിന്ദനായി'25", "ಸಿಂಧನೈ'25"];
@@ -12,6 +18,12 @@ const Hero = () => {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  const [rippleStates, setRippleStates] = useState<RippleState[]>([
+    { isAnimating: false },
+    { isAnimating: false },
+    { isAnimating: false },
+    { isAnimating: false }
+  ]);
 
   useEffect(() => {
     const targetDate = new Date('2025-05-02T00:00:00');  // Changed to April 19th, 2025
@@ -71,22 +83,27 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, textIndex, texts]);
 
-
   const formatTime = (time: number) => {
     return time.toString().padStart(2, '0');
   };
 
-  // Animated elements
-  const planetVariants = {
-    hover: {
-      y: -10,
-      transition: {
-        yoyo: Infinity,
-        duration: 2,
-      },
-    },
+  const handleRipple = (index: number) => {
+    setRippleStates(prev => {
+      const newStates = [...prev];
+      newStates[index].isAnimating = true;
+      return newStates;
+    });
+
+    setTimeout(() => {
+      setRippleStates(prev => {
+        const newStates = [...prev];
+        newStates[index].isAnimating = false;
+        return newStates;
+      });
+    }, 1000);
   };
 
+  // Animated elements
   const starVariants = {
     animate: {
       scale: [1, 1.2, 1],
@@ -112,55 +129,22 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden pt-24" id="hero">
-      {/* Background stars and elements */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://ext.same-assets.com/2447827226/793317872.png"
-          alt="Space Background"
-          className="h-full w-full object-cover"
-        />
+      <div className="absolute inset-0 bg-black">
+        <StarBackground />
       </div>
-
+      
       {/* Floating elements */}
-      {/* <motion.img
-        src="https://ext.same-assets.com/1533196759/449212754.png"
-        alt="Cloud Stars"
-        className="absolute right-[5%] top-[10%] w-16 md:w-32"
-        variants={starVariants}
-        animate="animate"
-      /> */}
-
-      <motion.img
-        src="https://ext.same-assets.com/516636630/2480188535.png"
-        alt="Planet Ring"
-        className="absolute right-[20%] top-[30%] w-32 md:w-64"
-        variants={planetVariants}
-        whileHover="hover"
-        initial={{ rotate: -10, scale: 2 }}
-        animate={{
-          rotate: 10,
-          scale: 1,
-          transition: {
-            rotate: {
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 8
-            },
-            scale: {
-              duration: 1.5,
-              ease: "easeOut"
-            }
-          }
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          width: '1500px',
+          height: '1500px',
+          top: '-40%',
+          right: '15%',
         }}
-      />
-
-      <motion.img
-        src="https://ext.same-assets.com/3889506305/3594095780.png"
-        alt="Flying Cat"
-        className="absolute left-[10%] top-[15%] w-16 md:w-32"
-        variants={catVariants}
-        animate="animate"
-      />
+      >
+        <Globe />
+      </div>
 
       {/* Main content */}
       <div className="container relative z-10 mx-auto px-4 pt-20 text-center">
@@ -177,7 +161,7 @@ const Hero = () => {
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-diagonal-shine"></span>
             </h1>
           </div>
-          <h2 className="mb-12 text-xl md:text-3xl">MAY 2nd & MAY 3rd</h2>
+          <h2 className="mb-12 text-xl md:text-3xl">2nd & 3rd MAY</h2>
 
           <div className="mb-16">
             <h3 className="mb-4 text-lg font-semibold md:text-xl">Blast Off In</h3>
@@ -203,66 +187,44 @@ const Hero = () => {
 
           {/* Stats section */}
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-            <div className="relative">
-              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
-                <motion.img
-                  src="https://ext.same-assets.com/61982440/2869253106.svg+xml"
-                  alt="planet1"
-                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-2xl font-bold md:text-3xl">₹60K</div>
+            {[
+              { img: "https://ext.same-assets.com/61982440/2869253106.svg+xml", value: "₹60K", label: "Prizepool" },
+              { img: "https://ext.same-assets.com/1645771940/811426858.svg+xml", value: "250+", label: "Participants" },
+              { img: "https://ext.same-assets.com/1422808050/2836999932.svg+xml", value: "50+", label: "Colleges" },
+              { img: "https://ext.same-assets.com/493208394/2510877119.svg+xml", value: "24H", label: "Time" }
+            ].map((stat, index) => (
+              <div className="relative" key={index}>
+                <div 
+                  className="relative cursor-pointer w-32 h-32 mx-auto flex items-center justify-center"
+                  onClick={() => handleRipple(index)}
+                >
+                  <motion.img
+                    src={stat.img}
+                    alt={`planet${index + 1}`}
+                    className="h-28 w-28 md:h-32 md:w-32 opacity-90 absolute"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <div className="text-2xl font-bold md:text-3xl">{stat.value}</div>
+                  </div>
+                  {rippleStates[index].isAnimating && (
+                    <div
+                      className="absolute rounded-full animate-ripple pointer-events-none"
+                      style={{
+                        border: '2px solid rgba(255, 255, 255, 0.8)',
+                        width: '128px', // Match planet size
+                        height: '128px', // Match planet size
+                        transform: 'translate(-50%, -50%)',
+                        left: '50%',
+                        top: '50%'
+                      }}
+                    />
+                  )}
+                </div>
+                <div className="mt-2">
+                  <div className="text-md font-bold">{stat.label}</div>
                 </div>
               </div>
-              <div className="mt-2">
-                <div className="text-md font-bold">Prizepool</div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
-                <motion.img
-                  src="https://ext.same-assets.com/1645771940/811426858.svg+xml"
-                  alt="planet2"
-                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-3xl font-bold md:text-3xl">250+</div>
-                </div>
-              </div>
-              <div className="mt-2">
-                <div className="text-md font-bold">Participants</div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
-                <motion.img
-                  src="https://ext.same-assets.com/1422808050/2836999932.svg+xml"
-                  alt="planet3"
-                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-2xl font-bold md:text-3xl">50+</div>
-                </div>
-              </div>
-              <div className="mt-2">
-                <div className="text-md font-bold">Colleges</div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative group hover:transform hover:scale-[1.3] transition-transform duration-300 cursor-pointer">
-                <motion.img
-                  src="https://ext.same-assets.com/493208394/2510877119.svg+xml"
-                  alt="planet4"
-                  className="mx-auto h-28 w-28 md:h-32 md:w-32 opacity-90"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-2xl font-bold md:text-3xl">24H</div>
-                </div>
-              </div>
-              <div className="mt-2">
-                <div className="text-md font-bold">Time</div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Register button */}

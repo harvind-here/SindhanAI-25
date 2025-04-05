@@ -102,6 +102,16 @@ module.exports = {
         "rainbow-border-left": {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(-100%)" }
+        },
+        ripple: {
+          '0%': { 
+            transform: 'translate(-50%, -50%) scale(1)',
+            opacity: '0.8'
+          },
+          '100%': { 
+            transform: 'translate(-50%, -50%) scale(2.5)',
+            opacity: '0'
+          }
         }
       },
       animation: {
@@ -112,7 +122,8 @@ module.exports = {
         "rainbow-border-top": "rainbow-border-top 0.5s linear forwards",
         "rainbow-border-right": "rainbow-border-right 0.5s linear 0.5s forwards",
         "rainbow-border-bottom": "rainbow-border-bottom 0.5s linear 1s forwards",
-        "rainbow-border-left": "rainbow-border-left 0.5s linear 1.5s forwards"
+        "rainbow-border-left": "rainbow-border-left 0.5s linear 1.5s forwards",
+        "ripple": "ripple 1s ease-out forwards"
       },
       container: {
         center: true,
