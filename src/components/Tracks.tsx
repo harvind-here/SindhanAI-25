@@ -27,7 +27,7 @@ const Tracks = () => {
       id: 'ai-track'
     },
     {
-      name: 'Data',
+      name: 'Data Analytics',
       icon: '/images/data-logo.png',
       id: 'data-track'
     },

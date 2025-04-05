@@ -74,44 +74,57 @@ const ProblemItem = ({ title, description }: ProblemItemProps) => {
   const [showHint, setShowHint] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (!isOpen) {
+      // Restart hint cycle when item is closed
       setShowHint(true);
-      setTimeout(() => {
-        setShowHint(false);
-      }, 3000);
-    }, 5000);
+      const cycleTimer = setInterval(() => {
+        setShowHint(prev => !prev);
+      }, 4000); // 3s show + 1s hide
 
-    return () => clearInterval(interval);
-  }, []);
+      return () => clearInterval(cycleTimer);
+    } else {
+      // Hide hint when item is open
+      setShowHint(false);
+    }
+  }, [isOpen]);
 
   return (
     <div className="border-b border-gray-700 py-3">
       <button
-        className="flex w-full items-center justify-between text-left"
+        className="w-full text-left"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex items-center gap-2">
-          <h3 className="text-base font-medium md:text-lg">{title}</h3>
-          <AnimatePresence>
-            {showHint && (
-              <motion.span
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="text-sm text-gray-500 typing-container"
-              >
-                <span className="typing-text">click for more info...</span>
-              </motion.span>
-            )}
-          </AnimatePresence>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 min-w-0 relative">
+            <motion.h3 
+              className={`text-base font-medium md:text-lg ${isOpen ? '' : 'truncate'}`}
+              layout // Enable layout animation
+              transition={{ duration: 0.3 }}
+            >
+              {title}
+            </motion.h3>
+            <AnimatePresence>
+              {showHint && !isOpen && (
+                <motion.div
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: "auto", opacity: 1 }}
+                  exit={{ width: 0, opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="text-sm text-gray-500 whitespace-nowrap overflow-hidden absolute left-full ml-2"
+                >
+                  click for more info
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <span className="flex-shrink-0">
+            <img
+              src="https://ext.same-assets.com/3736531968/1762190197.svg+xml"
+              alt="Toggle"
+              className={`h-5 w-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+            />
+          </span>
         </div>
-        <span>
-          <img
-            src="https://ext.same-assets.com/3736531968/1762190197.svg+xml"
-            alt="Toggle"
-            className={`h-6 w-6 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-          />
-        </span>
       </button>
       <motion.div
         initial={{ height: 0, opacity: 0 }}
@@ -265,7 +278,7 @@ const [ref, inView] = useInView({
       }
       
     ],
-    dataAnalysis: [
+    dataAnalytics: [
       {
         title: "DA01: Traffic Management",
         description: "To use data analytics to analyze traffic patterns, identify congestion hotspots, and optimize traffic management strategies to reduce congestion, travel time, and environmental impact."
@@ -332,10 +345,10 @@ const [ref, inView] = useInView({
 
           <div className="mb-12" id="data-track">
             <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'data-track' ? 'animate-rainbow' : ''}`}>
-              Data Analysis
+              Data Analytics
             </h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
-              {problemStatements.dataAnalysis.map((item, index) => (
+              {problemStatements.dataAnalytics.map((item, index) => (
                 <ProblemItem
                   key={`data-${index}`}
                   title={item.title}

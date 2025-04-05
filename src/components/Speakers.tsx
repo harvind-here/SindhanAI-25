@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const Speakers = () => {
   const [ref, inView] = useInView({
@@ -29,6 +29,63 @@ const Speakers = () => {
     }
   };
 
+  const [isGhibli, setIsGhibli] = useState(false);
+  const [isGlitching, setIsGlitching] = useState(false);
+
+  // Add glitch animation variants
+  const glitchVariants = {
+    hidden: { 
+      opacity: 0,
+      filter: "none",
+      transform: "translate(0, 0)"
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut"
+      }
+    },
+    glitch: {
+      opacity: [1, 0.8, 1],
+      filter: [
+        "none",
+        "grayscale(0.1) hue-rotate(2deg)",
+        "none"
+      ],
+      x: [0, -2, 2, 0],
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  useEffect(() => {
+    const cycleImages = () => {
+      setIsGhibli(false);
+      
+      // Add glitch sequence
+      setTimeout(() => {
+        setIsGlitching(true);
+        setTimeout(() => {
+          setIsGhibli(true);
+          setIsGlitching(false);
+        }, 200);
+      }, 3800); // Start glitch slightly before transition
+    };
+
+    // Initial cycle
+    cycleImages();
+
+    // Set up interval for continuous cycling
+    const interval = setInterval(() => {
+      cycleImages();
+    }, 6000); // Total cycle time (4s main + 2s ghibli)
+
+    return () => clearInterval(interval);
+  }, []);
+
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -46,7 +103,7 @@ const Speakers = () => {
     shootingStar: 'https://ext.same-assets.com/3043395600/3124093549.png',
     balloon: 'https://ext.same-assets.com/4133703346/493755053.png',
     whitePlanet: 'https://ext.same-assets.com/633887910/4018542477.svg+xml',
-    abheekPandoh: 'https://media.licdn.com/dms/image/v2/D5603AQHJaEaPQ0SS4A/profile-displayphoto-shrink_400_400/B56ZSIIQ3uGoAs-/0/1737450655651?e=1747872000&v=beta&t=erXZ1ktNjF89lLat6hUm92ZV9aR8ujVJm5osqoNUQ7w',
+    abheekPandoh: 'images/guest_dp.jpeg',
     ghibliGuest: '/images/ghibli_guest.png',
   };
 
@@ -100,40 +157,33 @@ const Speakers = () => {
               <div className="flex flex-col items-center gap-8 md:flex-row">
                 <div 
                   ref={imageRef}
-                  className="relative flex-shrink-0 overflow-hidden rounded-full h-48 w-48 md:h-64 md:w-64 cursor-pointer"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  onMouseMove={handleMouseMove}
+                  className="relative flex-shrink-0 overflow-hidden rounded-full h-48 w-48 md:h-64 md:w-64"
                 >
-                  <img
-                    src={speakerImages.abheekPandoh}
-                    alt="Gamaliel Das"
-                    className="h-full w-full object-cover absolute inset-0"
-                  />
-                  
-                  <div 
-                    className="absolute inset-0 w-full h-full overflow-hidden"
-                    style={{
-                      clipPath: isHovered ? 
-                        `circle(${Math.max(imageRef.current?.offsetWidth || 0, imageRef.current?.offsetHeight || 0) * 1.5}px at ${mousePosition.x}px ${mousePosition.y}px)` : 
-                        `circle(0px at ${mousePosition.x}px ${mousePosition.y}px)`
-                    }}
+                  <motion.div
+                    variants={glitchVariants}
+                    initial="hidden"
+                    animate={isGlitching ? "glitch" : isGhibli ? "hidden" : "visible"}
+                    className="absolute inset-0"
                   >
-                    <motion.div
-                      className="absolute inset-0"
-                      initial={false}
-                      transition={{ 
-                        duration: 0.6, 
-                        ease: "easeOut"
-                      }}
-                    >
-                      <img
-                        src={speakerImages.ghibliGuest}
-                        alt="Ghibli Guest"
-                        className="h-full w-full object-cover"
-                      />
-                    </motion.div>
-                  </div>
+                    <img
+                      src={speakerImages.abheekPandoh}
+                      alt="Gamaliel Das"
+                      className="h-full w-full object-cover"
+                    />
+                  </motion.div>
+                  
+                  <motion.div
+                    variants={glitchVariants}
+                    initial="hidden"
+                    animate={isGlitching ? "glitch" : isGhibli ? "visible" : "hidden"}
+                    className="absolute inset-0"
+                  >
+                    <img
+                      src={speakerImages.ghibliGuest}
+                      alt="Ghibli Guest"
+                      className="h-full w-full object-cover"
+                    />
+                  </motion.div>
                 </div>
 
                 <div className="text-center md:text-left">
