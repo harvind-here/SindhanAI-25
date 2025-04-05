@@ -34,9 +34,9 @@ const Globe: React.FC = () => {
     const ambientLight = new THREE.AmbientLight(0x111111, 0.2);
     scene.add(ambientLight);
 
-    // Main sunlight
+    // Main sunlight - moved further left
     const sunLight = new THREE.DirectionalLight(0xffffff, 1.0);
-    sunLight.position.set(5, 0, 5);
+    sunLight.position.set(2, -1, 5);
     scene.add(sunLight);
 
     // Globe geometry and material
@@ -45,12 +45,12 @@ const Globe: React.FC = () => {
     const texture = textureLoader.load('/images/earth_map.jpg');
     const bumpMap = textureLoader.load('/images/earth_bump.jpg');
 
-    // Custom shader material for Earth with terminator effect
+    // Custom shader material with adjusted terminator arc and gradient
     const material = new THREE.ShaderMaterial({
       uniforms: {
         dayTexture: { value: texture },
         bumpTexture: { value: bumpMap },
-        sunDirection: { value: new THREE.Vector3(5, 0, 5).normalize() },
+        sunDirection: { value: new THREE.Vector3(2, -1, 5).normalize() },
         bumpScale: { value: 0.02 },
       },
       vertexShader: `
@@ -67,41 +67,45 @@ const Globe: React.FC = () => {
       `,
       fragmentShader: `
         uniform sampler2D dayTexture;
-        uniform sampler2D bumpTexture;
         uniform vec3 sunDirection;
-        uniform float bumpScale;
         
         varying vec2 vUv;
         varying vec3 vNormal;
         varying vec3 vPosition;
         
         void main() {
+          vec4 texColor = texture2D(dayTexture, vUv);
           vec3 normal = normalize(vNormal);
           float cosTheta = dot(normal, sunDirection);
           
-          // Create smooth terminator transition
-          float twilightStart = -0.2;  // Adjust for wider/narrower twilight zone
-          float twilightEnd = 0.2;
+          // Terminator arc parameters - adjusted for leftward position
+          float arcWidth = 0.4;
+          float gradientWidth = 0.1;
           
-          // Calculate twilight intensity
-          float twilightIntensity = smoothstep(twilightStart, twilightEnd, cosTheta);
+          // Moved arc more to the left with adjusted offset
+          float arcOffset = 0.05; // Increased offset for leftward movement
+          float baseArc = smoothstep(-arcWidth, 0.0, cosTheta - arcOffset) * 
+                         smoothstep(arcWidth, 0.0, cosTheta - arcOffset);
           
-          // Get texture color
-          vec4 texColor = texture2D(dayTexture, vUv);
+          // Adjusted day/night gradient to match new arc position
+          float dayNight = smoothstep(-gradientWidth, gradientWidth, cosTheta - arcOffset * 0.8);
           
-          // Add subtle blue tint to twilight zone
-          vec3 twilightColor = mix(
-            texColor.rgb * 0.1,  // Dark side
-            texColor.rgb,        // Lit side
-            twilightIntensity
-          );
+          // Enhanced glow with adjusted position
+          float glowIntensity = smoothstep(-0.1, 0.0, cosTheta - arcOffset) * 
+                               smoothstep(0.1, 0.0, cosTheta - arcOffset);
           
-          // Add slight blue glow in twilight zone
-          float glowIntensity = (1.0 - abs(cosTheta - 0.0)) * 0.3;  // Peak at terminator
-          vec3 glowColor = vec3(0.1, 0.2, 0.4) * glowIntensity;
+          // Combine effects
+          float arcIntensity = baseArc * 1.0; // Brighter arc
+          float glowFactor = glowIntensity * 0.2; // Subtle glow
           
-          // Combine everything
-          vec3 finalColor = twilightColor + glowColor;
+          // Apply day/night transition
+          vec3 nightColor = texColor.rgb * 0.2; // Darker night side
+          vec3 dayColor = texColor.rgb;
+          vec3 baseColor = mix(nightColor, dayColor, dayNight);
+          
+          // Add arc and glow
+          vec3 arcColor = vec3(1.0, 0.98, 0.95); // Slightly warm white
+          vec3 finalColor = baseColor + arcColor * arcIntensity + arcColor * glowFactor;
           
           gl_FragColor = vec4(finalColor, 1.0);
         }
@@ -145,7 +149,7 @@ const Globe: React.FC = () => {
         }
 
         // Update sun direction in shader
-        const sunDir = new THREE.Vector3(5, 0, 5).normalize();
+        const sunDir = new THREE.Vector3(2, -1, 5).normalize();
         material.uniforms.sunDirection.value = sunDir;
       }
       renderer.render(scene, camera);
