@@ -30,8 +30,8 @@ const Sponsors = () => {
     ],
     gold: [
       {
-        name: '',
-        logo: '',
+        name: 'GoActiveBadminton',
+        logo: 'images/GAB.jpg',
         url: '',
       },
       {

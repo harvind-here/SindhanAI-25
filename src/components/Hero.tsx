@@ -157,7 +157,7 @@ const Hero = () => {
       
       {/* Floating elements - ensure Globe is above background */}
       <div
-        className="absolute pointer-events-none z-1"
+        className="absolute z-1" // Removed pointer-events-none
         style={{
           width: '1500px',
           height: '1500px',
@@ -211,7 +211,7 @@ const Hero = () => {
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
             {[
               { img: "https://ext.same-assets.com/61982440/2869253106.svg+xml", value: "₹60K", label: "Prizepool" },
-              { img: "https://ext.same-assets.com/1645771940/811426858.svg+xml", value: "250+", label: "Participants" },
+              { img: "https://ext.same-assets.com/1645771940/811426858.svg+xml", value: "3", label: "Tracks" },
               { img: "https://ext.same-assets.com/1422808050/2836999932.svg+xml", value: "50+", label: "Colleges" },
               { img: "https://ext.same-assets.com/493208394/2510877119.svg+xml", value: "24H", label: "Time" }
             ].map((stat, index) => (
