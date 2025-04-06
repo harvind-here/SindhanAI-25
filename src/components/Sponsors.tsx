@@ -30,22 +30,17 @@ const Sponsors = () => {
     ],
     gold: [
       {
-        name: 'GoActiveBadminton',
-        logo: 'images/GAB.jpg',
-        url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-    ],
-    silver: [
-      {
         name: 'BlackThunder',
         logo: 'images/blackth-logo.png',
         url: 'https://www.blackthunder.in/',
       },
+      {
+        name: 'GoActiveBadminton',
+        logo: 'images/GAB.jpg',
+        url: '',
+      }
+    ],
+    silver: [
       {
         name: '',
         logo: '',
