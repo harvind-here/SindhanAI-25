@@ -1,77 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Space Grotesk', sans-serif;
-  background-color: black;
-  color: white;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(99, 99, 99);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #5460b0;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #bb47b0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-}
-
-.section-title {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ff0000, #ff69b4, #7b68ee, #00bfff, #00ff7f);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.section-title:hover::after {
-  width: 100px;
-}
-
-section {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Glass effect */
-.glass {
-  background: rgba(27, 33, 49, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Timeline specific styles from SindhanTimeline.css */
 .sindhan-timeline {
   width: 100%;
   padding: 40px 20px;
@@ -79,11 +5,21 @@ section {
   color: white;
   position: relative;
   overflow: hidden;
-  /* font-family is already set globally */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Stars background effect (using classes .stars and .twinkling now) */
-/* .sindhan-timeline::before rule removed as it's handled by .stars div */
+/* Stars background effect */
+.sindhan-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxkZWZzPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJzdGFyIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI1MCUiIGZ4PSI1MCUiIGZ5PSI1MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InRyYW5zcGFyZW50Ii8+CiAgPGNpcmNsZSBjeD0iMTAlIiBjeT0iMjAlIiByPSIwLjUiIGZpbGw9InVybCgjc3RhcikiLz4KICA8Y2lyY2xlIGN4PSI4MCUiIGN5PSI0MCUiIHI9IjAuNCIgZmlsbD0idXJsKCNzdGFyKSIvPgogIDxjaXJjbGUgY3g9IjMwJSIgY3k9IjYwJSIgcj0iMC42IiBmaWxsPSJ1cmwoI3N0YXIpIi8+CiAgPGNpcmNsZSBjeD0iNzAlIiBjeT0iODAlIiByPSIwLjUiIGZpbGw9InVybCgjc3RhcikiLz4KICA8Y2lyY2xlIGN4PSI0MCUiIGN5PSIzMCUiIHI9IjAuMyIgZmlsbD0idXJsKCNzdGFyKSIvPgogIDxjaXJjbGUgY3g9IjYwJSIgY3k9IjUwJSIgcj0iMC40IiBmaWxsPSJ1cmwoI3N0YXIpIi8+CiAgPGNpcmNsZSBjeD0iMjAlIiBjeT0iNzAlIiByPSIwLjUiIGZpbGw9InVybCgjc3RhcikiLz4KICA8Y2lyY2xlIGN4PSI5MCUiIGN5PSIxMCUiIHI9IjAuNCIgZmlsbD0idXJsKCNzdGFyKSIvPgogIDxjaXJjbGUgY3g9IjUwJSIgY3k9IjkwJSIgcj0iMC42IiBmaWxsPSJ1cmwoI3N0YXIpIi8+Cjwvc3ZnPg==");
+  opacity: 0.3;
+  z-index: 0;
+}
 
 .timeline-header {
   text-align: center;
@@ -370,119 +306,4 @@ section {
   font-size: 0.9rem;
   line-height: 1.5;
 }
-/* End of Timeline specific styles */
 
-
-@layer utilities {
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  .text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-/* Animation keyframes */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes outlineRainbow {
-  0% { box-shadow: 0 0 0 2px #ff0000; }
-  16.6% { box-shadow: 0 0 0 2px #ff69b4; }
-  33.3% { box-shadow: 0 0 0 2px #7b68ee; }
-  50% { box-shadow: 0 0 0 2px #00bfff; }
-  66.6% { box-shadow: 0 0 0 2px #00ff7f; }
-  83.3% { box-shadow: 0 0 0 2px #ffff00; }
-  100% { box-shadow: 0 0 0 2px #ff0000; }
-}
-
-@keyframes diagonal-shine {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  100% {
-    transform: translateX(200%) translateY(200%) rotate(45deg);
-  }
-}
-
-/* Star animation background */
-@keyframes move {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2000px);
-  }
-}
-
-.stars {
-  /* Updated path */
-  background: #000 url("/images/stars.png") repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: 0;
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  /* Updated path */
-  background: transparent url("/images/twinkling.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  animation: move 70s linear infinite;
-}
-/* End of Star animation */
-
-
-.animate-diagonal-shine {
-  animation: diagonal-shine 3s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 4s ease-in-out infinite;
-}
-
-.apply-button {
-  font-weight: 700;
-  color: white !important;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.apply-button:hover {
-  animation: outlineRainbow 1s linear;
-  transform: scale(1.05);
-}

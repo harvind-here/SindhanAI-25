@@ -37,6 +37,26 @@ const Footer = () => {
               </a>
             </span>
           </div>
+
+          {/* Contact Information */}
+          <div className="mb-6 mt-8 grid grid-cols-1 gap-4 text-sm md:grid-cols-3">
+            <div>
+              <h4 className="mb-2 font-semibold">Student Coordinators</h4>
+              <p>Coordinator 1: <a href="tel:6383074075" className="hover:text-purple-300">63830 74075</a></p>
+              <p>Coordinator 2: <a href="tel:6385335417" className="hover:text-purple-300">63853 35417</a></p>
+            </div>
+            <div>
+              <h4 className="mb-2 font-semibold">Domain Contacts</h4>
+              <p>AI Domain: <a href="tel:8778814940" className="hover:text-purple-300">87788 14940</a></p>
+              <p>IoT: <a href="tel:6381479202" className="hover:text-purple-300">63814 79202</a></p>
+            </div>
+            <div>
+              <h4 className="mb-2 font-semibold">&nbsp;</h4> {/* Placeholder for alignment */}
+              <p>App Development: <a href="tel:9488774819" className="hover:text-purple-300">94887 74819</a></p>
+              <p>Open Innovation: <a href="tel:8608436242" className="hover:text-purple-300">86084 36242</a></p>
+            </div>
+          </div>
+
           <p className="text-sm text-gray-400">
             Copyright © {currentYear} SRMTRPEC. All rights reserved.
           </p>

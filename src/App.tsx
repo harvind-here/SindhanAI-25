@@ -8,6 +8,7 @@ import FAQ from './components/FAQ';
 import Sponsors from './components/Sponsors';
 import Footer from './components/Footer';
 import ProblemStatement from './components/ProblemStatement';  // Add this import
+import Timeline from './components/Timeline'; // Import the new Timeline component
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Hero/>
               <Tracks/>
               <About/>
+              <Timeline /> {/* Add the Timeline component here */}
               <ProblemStatement/> 
               <Speakers/>
               <Sponsors/>
@@ -29,7 +31,7 @@ function App() {
           } />
           {/* Add additional routes if needed */}
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );
