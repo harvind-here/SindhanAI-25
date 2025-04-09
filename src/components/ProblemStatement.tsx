@@ -363,7 +363,7 @@ const [ref, inView] = useInView({
 
           <div className="mb-12" id="data-track">
             <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'data-track' ? 'animate-rainbow' : ''}`}>
-              App Developement
+              App Development
             </h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {problemStatements.dataAnalytics.map((item, index) => (
