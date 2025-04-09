@@ -202,19 +202,19 @@ const [ref, inView] = useInView({
       },
       {
         title: "AI03: LLM based vocal support for the Disabled",
-        description: "A language model-powered voice assistant designed to assist individuals with disabilities in communication and daily tasks. It converts speech to text, provides real-time transcription, and enables intelligent voice interactions. The expected outcome is improved accessibility, allowing users to navigate digital environments, compose messages, and interact with systems more effectively."
+        description: "A language model-powered voice assistant designed to assist individuals with disabilities in communication. It converts incomplete speech to complete meaningful sentences, provides real-time transcription and better communication, and enables voice interactions. The expected outcome is improved accessibility, allowing interact with systems and other humans more effectively."
       },
       {
         title: "AI04: Real time AI Video Commentry",
-        description: "An AI system that generates live commentary on video content in real time, providing insights, context, and analysis. It can be used in sports, entertainment, and educational contexts, delivering relevant information and enhancing the viewer experience. The outcome is an intelligent, context-aware commentary system that adapts dynamically to the content being streamed."
+        description: "An AI system that generates live commentary on video content in real time, providing insights, context, and analysis. It can be used in sports, entertainment, and educational contexts, delivering relevant information and enhancing the viewer experience. The outcome is an interesting, context-aware commentary system that adapts dynamically to the content being streamed."
       },
       {
         title: "AI05: AI Meeting Summarizer",
-        description: "An AI tool that automatically transcribes and summarizes meetings, highlighting key points, decisions, and action items. It ensures that participants can quickly review discussions without going through lengthy recordings or notes. The expected outcome is improved efficiency in meeting management, better follow-up on action points, and enhanced documentation."
+        description: "An AI tool that automatically transcribes and summarizes meetings, highlighting key points, decisions, and action items. It ensures that participants can quickly review discussions without going through lengthy recordings or notes. The expected outcome is improved efficiency in meeting management, better follow-up on action points, and better documentation."
       },
       {
         title: "AI06: Fake News Detection Plugin",
-        description: "A browser or social media plugin that uses AI to detect misinformation and verify the credibility of news articles. It analyzes sources, cross-references data, and provides reliability scores to help users distinguish between factual and misleading content. The outcome is a more informed online audience, reduced spread of misinformation, and increased trust in news consumption."
+        description: "A browser or social media plugin that uses AI to detect misinformation and verify the credibility of news articles. It analyzes sources, cross-references data, and provides reliability scores to help users distinguish between factual and misleading content. The user outcome is to make them consume reliable online information and reduced spread of misinformation, and increased trust in news consumption."
       },
       {
         title: "AI07: Intelligent Email Management",
@@ -222,15 +222,15 @@ const [ref, inView] = useInView({
       },
       {
         title: "AI08: AI Database Manager",
-        description: "An intelligent database management system that automates query optimization, data indexing, and system maintenance. It ensures efficient data retrieval, detects inconsistencies, and provides predictive analytics. The outcome is improved database performance, reduced maintenance overhead, and enhanced data integrity."
+        description: "An intelligent database management system that automates query optimization, data indexing, and system maintenance. It should take care of data retrieval, detect inconsistencies, and provide analytics. The outcome is improved database performance, reduced maintenance overhead, and enhanced data integrity."
       },
       {
         title: "AI09: Customer Review Analyzer",
-        description: "Detailed analysis and report takeaways, An AI system that processes and analyzes customer reviews to extract sentiment, trends, and actionable insights. It categorizes feedback, detects common issues, and helps businesses understand customer sentiment. The expected outcome is improved decision-making for businesses, better customer engagement, and enhanced product or service improvements."
+        description: "Detailed analysis and report takeaways, An AI system that processes and analyzes customer reviews to extract sentiment, trends, and actionable insights. It categorizes feedback, detects common issues, and helps businesses understand customer sentiment. The expected outcome is improved decision-making for businesses, better customer engagement, and suggesting product or service improvements."
       },
       {
         title: "AI10: Spam Message Detector",
-        description: "An AI-based tool that identifies and filters out spam messages in emails, social media, and messaging apps. It detects fraudulent patterns, phishing attempts, and unwanted advertisements, reducing security risks. The outcome is a cleaner, safer communication experience with minimized distractions and threats. Overcome the limitations of conventional spam filtering."
+        description: "An AI-based tool that identifies and filters out spam messages in emails, social media, and messaging apps. It detects fraudulent patterns, phishing attempts, and unwanted advertisements, reducing security risks. The outcome is a cleaner, safer communication experience with minimized distractions and threats. Overcome the limitations of conventional spam filtering."
       }
     ],
     iot: [
