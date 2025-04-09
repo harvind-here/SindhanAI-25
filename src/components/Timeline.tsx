@@ -28,10 +28,10 @@ export default function Timeline() {
     },
     {
       id: 3,
-      date: "April 28-May 1, 2025",
+      date: "April 24-May 1, 2025",
       title: "Registration & Payment",
       description:
-        "Selected teams must complete registration and pay ₹550 per participant to confirm their spot in the hackathon.",
+        "Selected teams must complete registration and pay ₹500 per participant to confirm their spot in the hackathon.",
       icon: <CreditCard className="h-6 w-6 text-white" />,
       color: "from-[#9d4edd] to-[#e76f51]",
     },
@@ -215,7 +215,7 @@ export default function Timeline() {
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Pay & Register</h4>
               <p className="text-gray-300">
-                Selected teams will pay ₹550 per participant to confirm their spot. Registration closes on May 1st.
+                Selected teams will pay ₹500 per participant to confirm their spot. Registration closes on May 1st.
               </p>
             </div>
 

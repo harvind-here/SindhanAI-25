@@ -209,7 +209,7 @@ const FAQ = () => {
           </div> */}
 
           <div className="mb-12">
-            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Downloadables</h3>
+            <h3 id="downloadables" className="mb-4 text-xl font-semibold continuous-rainbow-2">Downloadables</h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {faqData.downloadables.map((item, index) => (
                 <FAQItem key={`downloadables-${index}`} question={item.question} answer={item.answer} />

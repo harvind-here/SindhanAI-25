@@ -59,7 +59,9 @@ const Navbar = () => {
     { name: 'Tracks', href: '#Tracks' },
     { name: 'ChiefGuest', href: '#Speakers' },  
     { name: 'FAQ', href: '#FAQ' },
+    { name: 'Downloadables', href: '#downloadables' }, // Added Downloadables link
     { name: 'Sponsors', href: '#Sponsors' },
+    { name: 'Contact', href: '#contact-info' }, // Added Contact link
   ];
 
   return (
