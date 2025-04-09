@@ -41,7 +41,7 @@ const Navbar = () => {
       // Calculate offset based on device type
       const navbarHeight = isMobile ? 80 : 100; // Adjust these values based on your navbar height
       const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight; // Reverted: Only subtract navbar height
 
       // Use setTimeout to ensure menu close animation completes before scrolling
       setTimeout(() => {
@@ -55,11 +55,11 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Problem Statements', href: '#ProblemStatement' },
+    { name: 'Downloadables', href: '#downloadables-section' }, // Updated href for Downloadables
     { name: 'About', href: '#About' },
     { name: 'Tracks', href: '#Tracks' },
     { name: 'ChiefGuest', href: '#Speakers' },  
     { name: 'FAQ', href: '#FAQ' },
-    { name: 'Downloadables', href: '#downloadables' }, // Added Downloadables link
     { name: 'Sponsors', href: '#Sponsors' },
     { name: 'Contact', href: '#contact-info' }, // Added Contact link
   ];
@@ -93,6 +93,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-white hover:text-purple-300"
+                onClick={(e) => handleNavClick(e, link.href)} // Added onClick handler for desktop
               >
                 {link.name}
               </a>

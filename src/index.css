@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Adjust scroll target position for fixed header */
 }
 
 body {

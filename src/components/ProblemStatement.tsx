@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+// Import the named export FAQItem
+import { FAQItem } from './FAQ'; 
 
 interface ProblemItemProps {
   title: string;
@@ -322,6 +324,18 @@ const [ref, inView] = useInView({
     ]
   };
 
+  // Data for the downloadables section
+  const downloadablesData = [
+    {
+      question: "Rulebook",
+      answer: <a href="https://docs.google.com/document/d/1GesVoglTzGEhPA3JENAQTmLbWUKyigds/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download Rulebook</a>
+    },
+    {
+      question: "PPT Template",
+      answer: <a href="https://docs.google.com/presentation/d/1x2rkUV-5AAbOK999FyiKag82aWIemLbZ/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download PPT Template</a>
+    }
+  ];
+
   return (
     <section id="ProblemStatement" className="relative bg-[#1b2131] py-24">
       <div className="container relative z-10 mx-auto px-4">
@@ -384,6 +398,20 @@ const [ref, inView] = useInView({
               />
             </div>
           </div>
+
+          {/* Downloadables Section Added Here */}
+          <div className="mb-12" id="downloadables-section">
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">
+              Downloadables
+            </h3>
+            <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
+              {downloadablesData.map((item, index) => (
+                // Reusing FAQItem structure for consistency
+                <FAQItem key={`downloadable-${index}`} question={item.question} answer={item.answer} />
+              ))}
+            </div>
+          </div>
+          
         </motion.div>
       </div>
     </section>

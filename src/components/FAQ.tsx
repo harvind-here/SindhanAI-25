@@ -7,7 +7,8 @@ interface FAQItemProps {
   answer: React.ReactNode;
 }
 
-const FAQItem = ({ question, answer }: FAQItemProps) => {
+// Export FAQItem so it can be reused
+export const FAQItem = ({ question, answer }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -131,7 +132,7 @@ const FAQ = () => {
         question: "PPT Template",
         answer: <a href="https://docs.google.com/presentation/d/1x2rkUV-5AAbOK999FyiKag82aWIemLbZ/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download PPT Template</a>
       }
-    ],
+    ], // Removed downloadables array entry
     logistics: [
       {
         question: "Can I attend SindhanAI virtually?",
@@ -208,14 +209,7 @@ const FAQ = () => {
             </div>
           </div> */}
 
-          <div className="mb-12">
-            <h3 id="downloadables" className="mb-4 text-xl font-semibold continuous-rainbow-2">Downloadables</h3>
-            <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
-              {faqData.downloadables.map((item, index) => (
-                <FAQItem key={`downloadables-${index}`} question={item.question} answer={item.answer} />
-              ))}
-            </div>
-          </div>
+          {/* Downloadables section removed from here */}
         </motion.div>
       </div>
     </section>
