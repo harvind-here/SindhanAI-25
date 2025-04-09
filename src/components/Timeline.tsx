@@ -40,7 +40,7 @@ export default function Timeline() {
       date: "May 2-3, 2025",
       title: "SindhanAI'25 Hackathon",
       description:
-        "24-hour coding challenge across 3 tracks: AI, DATA, and IoT. Compete for prizes worth ₹60K and network with industry experts.",
+        "24-hour coding challenge across 3 tracks: AI, App Development, and IoT. Compete for prizes worth ₹60K and network with industry experts.",
       icon: <Rocket className="h-6 w-6 text-white" />,
       color: "from-[#e76f51] to-[#9d4edd]",
     },
