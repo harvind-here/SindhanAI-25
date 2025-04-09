@@ -182,6 +182,8 @@ const Hero = () => {
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-diagonal-shine"></span>
             </h1>
           </div>
+          {/* Added tagline */}
+          <p className="text-lg md:text-xl text-gray-300 mt-2 mb-8 font-bold">Innovate | Agitate | Organize</p>
           <h2 className="mb-12 text-xl md:text-3xl">2nd & 3rd MAY</h2>
 
           <div className="mb-16">

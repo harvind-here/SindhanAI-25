@@ -280,40 +280,44 @@ const [ref, inView] = useInView({
     ],
     dataAnalytics: [
       {
-        title: "DA01: Traffic Management",
-        description: "To use data analytics to analyze traffic patterns, identify congestion hotspots, and optimize traffic management strategies to reduce congestion, travel time, and environmental impact."
+        title: "AD01: Direct Market Access for Farmers",
+        description: "A Direct Market Access platform empowers farmers by enabling them to sell their produce directly to consumers or markets, cutting out the middlemen and increasing their profits. Through a user-friendly digital platform, farmers can create profiles, list their products, and connect with potential buyers. This system also includes real-time updates on market trends, so farmers can adjust prices and strategies according to demand and supply dynamics. Additionally, farmers can easily access information about government schemes, subsidies, and agricultural practices through the platform, which supports them in making informed decisions and maximizing their earnings. Features may also include logistics support, payment processing, and even feedback systems for quality assurance."
       },
       {
-        title: "DA02: Healthcare analytics",
-        description: "To apply data analytics for monitoring patient health records, predicting disease risks, and optimizing hospital resource allocation to enhance patient care and reduce operational costs."
+        title: "AD02: Real-time Tracking of Air and Water Pollution",
+        description: "This system provides continuous, real-time monitoring of air and water quality, helping individuals, governments, and organizations stay informed about pollution levels and take timely action. Sensors placed in different locations measure various pollutants such as particulate matter (PM), carbon dioxide (CO2), nitrogen dioxide (NO2), and waterborne contaminants. The data is then transmitted to a centralized platform, where it’s analyzed and presented in an easy-to-understand format. Users receive notifications or alerts when pollution levels exceed safe thresholds, prompting immediate action to mitigate environmental risks, such as advisories for vulnerable groups or local interventions by authorities. It serves as an essential tool for cities, industries, environmental organizations, and communities in their efforts to maintain sustainable living conditions."
       },
       {
-        title: "DA03: Socialmedia Analytics",
-        description: "To apply data analytics for analyzing social media trends, tracking brand sentiment, and optimizing engagement strategies to enhance online presence and customer satisfaction"
+        title: "AD03: Connecting Surplus Food Sources to NGOs",
+        description: "This platform addresses the growing issue of food waste and hunger by connecting individuals, businesses, and farmers with NGOs that help distribute surplus food to those in need. It acts as a bridge between those who have excess food (restaurants, households, farms, etc.) and organizations that can redistribute it to impoverished communities. The app allows donors to list surplus food items, including details such as quantity, expiration dates, and packaging, and then connects them with local NGOs and food banks that can accept and distribute the items. The platform ensures safe and hygienic handling, tracks donations, and provides transparency on the impact of donations, thus creating a sustainable cycle of reducing food waste while addressing food insecurity."
       },
       {
-        title: "DA04: Environment Analytics",
-        description: "To use data analytics for monitoring air quality, tracking climate change trends, and optimizing energy consumption to reduce environmental impact and promote sustainability."
+        title: "AD04: Health Tracking System for Rural People",
+        description: "Aimed at improving health outcomes in rural areas, this system allows individuals to easily track their health metrics (e.g., blood pressure, glucose levels, etc.) and maintain a comprehensive digital health history. The platform is designed to be simple and accessible, with a focus on overcoming infrastructure challenges in rural areas. It could include features like SMS-based alerts for health reminders or updates for those without reliable internet access. Users can connect remotely with healthcare professionals via telemedicine, allowing for timely advice, diagnosis, or follow-up care. The system could also integrate with local health centers and hospitals to maintain continuity of care, track vaccination schedules, and ensure rural populations have better access to healthcare resources."
       },
       {
-        title: "DA05: Cyber security Analytics",
-        description: "To use data analytics for detecting security threats, analyzing network vulnerabilities, and optimizing cybersecurity protocols to prevent data breaches and ensure digital safety."
+        title: "AD05: Personalized Career Guidance for Students",
+        description: "This app provides personalized career advice based on a student’s interests, skills, and academic background. The platform collects data on the student’s strengths, preferred subjects, extracurricular activities, and career aspirations to recommend suitable career paths. It suggests relevant courses, certifications, and workshops that will help students build the skills needed for their desired careers. Additionally, the app helps students find internships, volunteer opportunities, and job openings that align with their profiles. It might also include a mentor matching feature, where students can be paired with industry professionals for guidance, advice, and networking opportunities."
       },
       {
-        title: "DA06: Financial analytics",
-        description: "To leverage data analytics for detecting fraudulent transactions, analyzing spending patterns, and optimizing investment strategies to enhance financial security and profitability."
+        title: "AD06: Vaccination Tracker and Appointment Scheduler",
+        description: "The Vaccination Tracker and Appointment Scheduler is an app that helps individuals manage their vaccination history and ensure they never miss an important vaccination. By tracking dates of administered vaccines, users are sent timely reminders for upcoming doses. The app also allows users to schedule vaccination appointments at nearby healthcare facilities, whether they are routine vaccinations for children, seasonal flu shots, or COVID-19 vaccinations. The app provides location-based data on available vaccine stocks and appointment slots, making the process efficient and helping to ensure the timely completion of vaccination schedules."
       },
       {
-        title: "DA07: Disaster Prediction",
-        description: "Develop a predictive model using satellite imagery and environmental datasets to identify high-risk areas for landslides and floods."
+        title: "AD07: Weather Data for Farmers",
+        description: "This app provides weather forecasts, real-time meteorological data, and climate insights specifically tailored to the needs of farmers. It offers predictions on rainfall, temperature fluctuations, frost warnings, and wind speeds, helping farmers make informed decisions regarding planting, irrigation, pest control, and harvesting. The app may also include a weather-based irrigation scheduling feature to prevent water wastage. Additionally, it can offer advice on crop varieties best suited for the current season and climatic conditions, enabling farmers to maximize yields and minimize risks due to adverse weather conditions. Alerts for extreme weather events (e.g., drought, floods, storms) also help farmers take preemptive measures to protect their crops."
       },
       {
-        title: "DA08: Budget Analysis",
-        description: "To develop a model that predicts a man's spending habits across different lifestyle changes and budget optimization which influence government tax revenues."
+        title: "AD08: Social Volunteer Platform",
+        description: "The Social Volunteer Platform is designed to connect people with local social impact projects and volunteer opportunities. It offers a searchable database of causes, from education and healthcare to environmental sustainability and disaster relief, allowing users to find projects that match their skills, interests, and availability. Volunteers can sign up for specific events, track the hours they’ve contributed, and receive certificates of participation that can be useful for resumes or applications. The platform could include features like user ratings of events, project organizers, and opportunities for skill-building, making it an attractive tool for those looking to make a tangible difference in their communities while gaining personal development."
       },
       {
-        title: "DA09: Business analytics",
-        description: "To use data analytics for segmenting customers, analyzing purchasing behavior, and optimizing marketing strategies to improve customer engagement and maximize revenue."
+        title: "AD09: Personal Finance and Investment Tracker",
+        description: "This app helps users take control of their finances by offering real-time tracking of their spending, income, and savings. It includes budgeting tools that allow users to set monthly or yearly financial goals and provides insights into their spending habits. The app also offers personalized investment advice based on the user’s financial profile and risk tolerance, recommending opportunities such as stocks, bonds, mutual funds, and more. By integrating with users’ bank accounts, credit cards, and investment portfolios, the app provides a complete view of financial health and offers strategies to optimize savings and returns. Alerts and notifications for bills, investment opportunities, or changes in financial status help users stay proactive with their finances."
+      },
+      {
+        title: "AD10: Global Travel Experience App",
+        description: "This app is designed to enhance the travel experience by offering personalized travel itineraries based on the user’s preferences, budget, and past travel history. It provides tailored suggestions for destinations, accommodations, activities, and local experiences, taking into account the user’s interests, preferred climate, and travel constraints. It may include user-generated reviews, tips, and recommendations for destinations, restaurants, tours, and experiences, allowing travelers to make informed choices. The app can also integrate with booking services, offering users easy access to book flights, hotels, and tours. Social sharing features allow travelers to document their experiences, share photos and stories, and connect with like-minded travelers across the globe."
       }
     ]
   };
@@ -345,7 +349,7 @@ const [ref, inView] = useInView({
 
           <div className="mb-12" id="data-track">
             <h3 className={`mb-4 text-xl font-semibold ${activeTrack === 'data-track' ? 'animate-rainbow' : ''}`}>
-              Data Analytics
+              App Developement
             </h3>
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               {problemStatements.dataAnalytics.map((item, index) => (

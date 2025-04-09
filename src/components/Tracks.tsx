@@ -23,23 +23,23 @@ const Tracks = () => {
   const trackList = [
     {
       name: 'Artificial Intelligence',
-      icon: '/images/ai-logo.png',
+      icon: 'https://github.com/harvind-here/asset_repo/blob/main/public/images/output-onlinepngtools.png?raw=true',
       id: 'ai-track'
     },
     {
-      name: 'Data Analytics',
-      icon: '/images/data-logo.png',
+      name: 'App Development',
+      icon: 'https://github.com/harvind-here/asset_repo/blob/main/public/images/app-logo.png?raw=true',
       id: 'data-track'
     },
     {
       name: 'Internet of Things',
-      icon: '/images/iot-logo.png',
+      icon: 'https://github.com/harvind-here/asset_repo/blob/main/public/images/image.png?raw=true',
       id: 'iot-track'
     },
     {
       name: 'Open Innovation',
-      icon: '/images/open-logo.png',
-      id: 'open-track'
+      icon: 'https://github.com/harvind-here/asset_repo/blob/main/public/images/open-logo.png?raw=true',
+      id: 'open-innovation'
     }
   ];
 

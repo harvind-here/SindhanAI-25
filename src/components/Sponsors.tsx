@@ -23,89 +23,44 @@ const Sponsors = () => {
   const sponsors = {
     platinum: [
       {
-        name: '',
-        logo: '',
-        url: '',
-      },
-    ],
-    gold: [
-      {
         name: 'BlackThunder',
-        logo: 'images/blackth-logo.png',
+        logo: 'https://github.com/harvind-here/asset_repo/blob/main/public/images/blackth-logo.png?raw=true',
         url: 'https://www.blackthunder.in/',
       },
       {
         name: 'GoActiveBadminton',
-        logo: 'images/GAB.jpg',
-        url: '',
+        logo: 'https://github.com/harvind-here/asset_repo/blob/main/public/images/GAB.jpg?raw=true',
+        url: 'https://www.instagram.com/go_active_badminton_gab/',
       }
     ],
-    silver: [
-      {
-        name: '',
-        logo: '',
-        url: '#',
-      },
+    /* gold: [
       {
         name: '',
         logo: '',
         url: '',
-      },
-    ],
-    bronze: [
+      }
+    ], */
+    /* silver: [
       {
         name: '',
         logo: '',
         url: '',
-      },
+      }
+    ], */
+    /* bronze: [
       {
         name: '',
         logo: '',
         url: '',
-      },
+      }
+    ], */
+    /* partners: [
       {
         name: '',
         logo: '',
         url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-    ],
-    partners: [
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-      {
-        name: '',
-        logo: '',
-        url: '',
-      },
-    ],
+      }
+    ] */
   };
 
   const sponsorVariants = {
@@ -153,7 +108,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="mx-4 flex h-24 w-64 items-center justify-center rounded-lg p-4 md:h-32"
+                  className="mx-4 flex h-32 w-80 items-center justify-center rounded-lg p-4 md:h-40"
                 >
                   <img
                     src={sponsor.logo}
@@ -166,7 +121,7 @@ const Sponsors = () => {
           </div>
 
           {/* Gold sponsors */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <div className="mx-auto flex flex-wrap justify-center">
               {sponsors.gold.map((sponsor, index) => (
                 <motion.a
@@ -179,7 +134,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-4 flex h-20 w-48 items-center justify-center rounded-lg p-4 md:h-24 md:w-56"
+                  className="m-4 flex h-24 w-60 items-center justify-center rounded-lg p-4 md:h-32 md:w-64"
                 >
                   <img
                     src={sponsor.logo}
@@ -189,10 +144,10 @@ const Sponsors = () => {
                 </motion.a>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Silver sponsors */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <div className="mx-auto flex flex-wrap justify-center">
               {sponsors.silver.map((sponsor, index) => (
                 <motion.a
@@ -205,7 +160,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-3 flex h-16 w-40 items-center justify-center rounded-lg p-3 md:h-20 md:w-48"
+                  className="m-3 flex h-20 w-52 items-center justify-center rounded-lg p-3 md:h-24 md:w-60"
                 >
                   <img
                     src={sponsor.logo}
@@ -215,10 +170,10 @@ const Sponsors = () => {
                 </motion.a>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Bronze sponsors */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <div className="mx-auto flex flex-wrap justify-center">
               {sponsors.bronze.map((sponsor, index) => (
                 <motion.a
@@ -231,7 +186,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-2 flex h-12 w-32 items-center justify-center rounded-lg p-2 md:h-16 md:w-40"
+                  className="m-2 flex h-16 w-40 items-center justify-center rounded-lg p-2 md:h-20 md:w-48"
                 >
                   <img
                     src={sponsor.logo}
@@ -241,10 +196,10 @@ const Sponsors = () => {
                 </motion.a>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Partners */}
-          <div>
+          {/* <div>
             <div className="mx-auto flex flex-wrap justify-center">
               {sponsors.partners.map((sponsor, index) => (
                 <motion.a
@@ -257,7 +212,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-2 flex h-10 w-28 items-center justify-center rounded-lg p-2 md:h-12 md:w-36"
+                  className="m-2 flex h-12 w-36 items-center justify-center rounded-lg p-2 md:h-16 md:w-44"
                 >
                   <img
                     src={sponsor.logo}
@@ -267,7 +222,7 @@ const Sponsors = () => {
                 </motion.a>
               ))}
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

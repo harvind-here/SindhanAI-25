@@ -122,6 +122,16 @@ const FAQ = () => {
         answer: " No, this is a 24-hour hackathon, and all projects must be developed during the event itself. Unless your prject is in the ideation stage and align with any tracks."
       }
     ],
+    downloadables: [
+      {
+        question: "Rulebook",
+        answer: <a href="https://docs.google.com/document/d/1GesVoglTzGEhPA3JENAQTmLbWUKyigds/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download Rulebook</a>
+      },
+      {
+        question: "PPT Template",
+        answer: <a href="https://docs.google.com/presentation/d/1x2rkUV-5AAbOK999FyiKag82aWIemLbZ/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download PPT Template</a>
+      }
+    ],
     logistics: [
       {
         question: "Can I attend SindhanAI virtually?",
@@ -197,6 +207,15 @@ const FAQ = () => {
               ))}
             </div>
           </div> */}
+
+          <div className="mb-12">
+            <h3 className="mb-4 text-xl font-semibold continuous-rainbow-2">Downloadables</h3>
+            <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
+              {faqData.downloadables.map((item, index) => (
+                <FAQItem key={`downloadables-${index}`} question={item.question} answer={item.answer} />
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

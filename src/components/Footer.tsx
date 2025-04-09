@@ -51,7 +51,8 @@ const Footer = () => {
               <p>IoT: <a href="tel:6381479202" className="hover:text-purple-300">63814 79202</a></p>
             </div>
             <div>
-              <h4 className="mb-2 font-semibold">&nbsp;</h4> {/* Placeholder for alignment */}
+              {/* Placeholder for alignment - hidden on mobile */}
+              <h4 className="mb-2 hidden font-semibold md:block">&nbsp;</h4>
               <p>App Development: <a href="tel:9488774819" className="hover:text-purple-300">94887 74819</a></p>
               <p>Open Innovation: <a href="tel:8608436242" className="hover:text-purple-300">86084 36242</a></p>
             </div>
