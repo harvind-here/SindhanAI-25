@@ -4,12 +4,12 @@ import { useState, useRef, useEffect } from 'react';
 
 const Speakers = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.25,
   });
 
   const [starRef, starInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.6,
     rootMargin: '-100px 0px'
   });

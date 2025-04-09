@@ -143,7 +143,7 @@ const ProblemItem = ({ title, description }: ProblemItemProps) => {
 
 const ProblemStatement = () => {
 const [ref, inView] = useInView({
-  triggerOnce: false,
+  triggerOnce: true,
   threshold: 0.1, // Reduced threshold for earlier trigger
 });
 

@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Sponsors = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.25,
   });
 
@@ -153,7 +153,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="mx-4 flex h-24 w-64 items-center justify-center rounded-lg bg-white/5 p-4 backdrop-blur-sm md:h-32"
+                  className="mx-4 flex h-24 w-64 items-center justify-center rounded-lg p-4 md:h-32"
                 >
                   <img
                     src={sponsor.logo}
@@ -179,7 +179,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-4 flex h-20 w-48 items-center justify-center rounded-lg bg-white/5 p-4 backdrop-blur-sm md:h-24 md:w-56"
+                  className="m-4 flex h-20 w-48 items-center justify-center rounded-lg p-4 md:h-24 md:w-56"
                 >
                   <img
                     src={sponsor.logo}
@@ -205,7 +205,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-3 flex h-16 w-40 items-center justify-center rounded-lg bg-white/5 p-3 backdrop-blur-sm md:h-20 md:w-48"
+                  className="m-3 flex h-16 w-40 items-center justify-center rounded-lg p-3 md:h-20 md:w-48"
                 >
                   <img
                     src={sponsor.logo}
@@ -231,7 +231,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-2 flex h-12 w-32 items-center justify-center rounded-lg bg-white/5 p-2 backdrop-blur-sm md:h-16 md:w-40"
+                  className="m-2 flex h-12 w-32 items-center justify-center rounded-lg p-2 md:h-16 md:w-40"
                 >
                   <img
                     src={sponsor.logo}
@@ -257,7 +257,7 @@ const Sponsors = () => {
                   initial="hidden"
                   animate={inView ? 'visible' : 'hidden'}
                   whileHover="hover"
-                  className="m-2 flex h-10 w-28 items-center justify-center rounded-lg bg-white/5 p-2 backdrop-blur-sm md:h-12 md:w-36"
+                  className="m-2 flex h-10 w-28 items-center justify-center rounded-lg p-2 md:h-12 md:w-36"
                 >
                   <img
                     src={sponsor.logo}

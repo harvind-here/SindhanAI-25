@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Tracks = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.25,
   });
 
