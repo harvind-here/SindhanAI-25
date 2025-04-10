@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
 
           <p className="mt-8 text-sm text-gray-400">
-            Done by Harvind and Esshwar.
+            {/* Done by Harvind Mukhal M*/}
           </p>
 
           {/* Hidden credit for clone - comment this out in real production */}

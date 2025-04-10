@@ -3,18 +3,20 @@ import * as THREE from 'three';
 
 interface GlobeProps {
   isAnimationComplete: boolean;
+  onAnimationComplete?: () => void; // Add callback prop
 }
 
-const Globe: React.FC<GlobeProps> = ({ isAnimationComplete }) => {
+const Globe: React.FC<GlobeProps> = ({ isAnimationComplete, onAnimationComplete }) => {
   const mountRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<THREE.Mesh>();
-  const markerRef = useRef<THREE.Mesh>(); // Ref for the location marker
-  // const isAnimatingToTarget = useRef(false); // No longer needed
+  const markerRef = useRef<THREE.Mesh>(); 
   const hasScrolled = useRef(false);
-  const raycaster = useRef(new THREE.Raycaster()); // For click detection
-  const mouse = useRef(new THREE.Vector2()); // For mouse coordinates
-  const currentRotationTargetRef = useRef<number>(0); // Target rotation for smooth interpolation
-  const targetRotationY = (200 * Math.PI) / 180; // Updated target rotation
+  const isAnimating = useRef(false);
+  const animationStart = useRef(0);
+  const raycaster = useRef(new THREE.Raycaster()); 
+  const mouse = useRef(new THREE.Vector2()); 
+  const currentRotationTargetRef = useRef<number>(0); 
+  const targetRotationY = (200 * Math.PI) / 180; 
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -123,9 +125,14 @@ const Globe: React.FC<GlobeProps> = ({ isAnimationComplete }) => {
     globeRef.current = globe;
     scene.add(globe);
 
+    // Set initial position and scale
+    globe.position.x = -1;
+    globe.position.y = 0.5; // Start higher
+    globe.scale.set(0.7, 0.7, 0.7); // Start smaller
+
     // --- Add Location Marker ---
-    const markerGeometry = new THREE.SphereGeometry(0.018, 16, 16); // Reduced base size
-    const markerMaterial = new THREE.MeshBasicMaterial({ color: 0xf5df53, transparent: true, opacity: 0.8, side: THREE.DoubleSide }); // Ensure both sides are checked
+    const markerGeometry = new THREE.SphereGeometry(0.018, 16, 16);
+    const markerMaterial = new THREE.MeshBasicMaterial({ color: 0xf5df53, transparent: true, opacity: 0.8, side: THREE.DoubleSide }); 
     const marker = new THREE.Mesh(markerGeometry, markerMaterial);
     markerRef.current = marker;
 
@@ -165,50 +172,61 @@ const Globe: React.FC<GlobeProps> = ({ isAnimationComplete }) => {
       }
 
       if (globeRef.current) {
-        const baseSpeed = 0.001; // Keep speed
-        const easingFactor = 0.12; // Increase factor slightly for smoother interpolation
+        const baseSpeed = 0.001; 
+        const easingFactor = 0.03; // Reduced easing factor for slower rotation interpolation
         const TWO_PI = Math.PI * 2;
 
-        // Determine the target rotation for this frame
         let frameTarget: number;
         if (hasScrolled.current) {
-          // After scroll, the target is fixed
           frameTarget = targetRotationY;
         } else {
-          // Before scroll, the target continuously advances
-          currentRotationTargetRef.current += baseSpeed;
+          currentRotationTargetRef.current += baseSpeed; // Adjust speed and direction
           frameTarget = currentRotationTargetRef.current;
         }
 
-        // Smoothly interpolate the globe's actual rotation towards the frameTarget
         const currentRotationY = globeRef.current.rotation.y;
         const normalizedCurrent = (currentRotationY % TWO_PI + TWO_PI) % TWO_PI;
         const normalizedFrameTarget = (frameTarget % TWO_PI + TWO_PI) % TWO_PI;
 
         let delta: number;
-
         if (hasScrolled.current) {
-          // After scroll, calculate CLOCKWISE delta to the fixed target
           delta = normalizedFrameTarget - normalizedCurrent;
-          if (delta < 0) {
-            delta += TWO_PI; // Ensure delta represents the clockwise path
-          }
+          if (delta < 0) delta += TWO_PI;
         } else {
-          // Before scroll, calculate SHORTEST delta to the advancing target
           delta = normalizedFrameTarget - normalizedCurrent;
-          if (delta > Math.PI) {
-            delta -= TWO_PI; // Go counter-clockwise (shorter path)
-          } else if (delta < -Math.PI) {
-            delta += TWO_PI; // Go clockwise (shorter path)
+          if (delta > Math.PI) delta -= TWO_PI;
+          else if (delta < -Math.PI) delta += TWO_PI;
+        }
+
+        const step = delta * easingFactor;
+        globeRef.current.rotation.y += step;
+
+        if (isAnimating.current) {
+          const animationDuration = 1500; // Increased duration for smoother feel
+          const elapsed = Date.now() - animationStart.current;
+          let t = Math.min(elapsed / animationDuration, 1);
+
+          // Apply easeInOutQuad easing function
+          const easedT = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+          // Interpolate position and scale using eased time
+          globeRef.current.position.x = THREE.MathUtils.lerp(-1, 0, easedT); // Animate from -1 to 0
+          globeRef.current.position.y = THREE.MathUtils.lerp(0.5, 0, easedT); // Animate from 0.5 to 0
+          globeRef.current.scale.set(
+            THREE.MathUtils.lerp(0.7, 1, easedT), // Animate scale from 0.7 to 1
+            THREE.MathUtils.lerp(0.7, 1, easedT),
+            THREE.MathUtils.lerp(0.7, 1, easedT)
+          );
+
+          if (t === 1) { // Check against original 't' for completion
+            isAnimating.current = false;
+            // Ensure final state is exactly set
+            globeRef.current.position.x = 0;
+            globeRef.current.position.y = 0;
+            globeRef.current.scale.set(1, 1, 1);
           }
         }
 
-        // Apply the easing step based on the calculated delta
-        const step = delta * easingFactor;
-        // Apply step unconditionally for continuous interpolation
-        globeRef.current.rotation.y += step;
-
-        // Update sun direction in shader
         const sunDir = new THREE.Vector3(2, -1, 5).normalize();
         material.uniforms.sunDirection.value = sunDir;
       }
@@ -220,12 +238,12 @@ const Globe: React.FC<GlobeProps> = ({ isAnimationComplete }) => {
     const handleFirstScroll = () => {
       if (!hasScrolled.current) {
         hasScrolled.current = true;
-        // isAnimatingToTarget.current = true; // No longer needed
-        // Remove the listener after the first scroll
+        isAnimating.current = true;
+        animationStart.current = Date.now();
         window.removeEventListener('scroll', handleFirstScroll);
       }
     };
-    window.addEventListener('scroll', handleFirstScroll, { once: false }); // Listen until triggered
+    window.addEventListener('scroll', handleFirstScroll, { once: false }); 
 
     // --- Handle Click on Marker ---
     const handleClick = (event: MouseEvent) => {

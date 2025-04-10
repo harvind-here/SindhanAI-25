@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react'; // Added useCallback
 import Globe from './Globe';
-// Removed StarBackground import
 
 interface RippleState {
   isAnimating: boolean;
@@ -154,13 +153,13 @@ const Hero = () => {
     <section className="relative min-h-screen overflow-hidden pt-24" id="hero">
       {/* Background container - set z-index here */}
       {/* Removed StarBackground component usage */}
-      <div className="absolute inset-0 bg-black z-0">
+      <div className="fixed inset-0 bg-black z-[-20]"> {/* Changed to fixed, adjusted z-index */}
         {/* StarBackground removed */}
       </div>
       
       {/* Floating elements - ensure Globe is above background */}
       <div
-        className="absolute z-1" // Removed pointer-events-none
+        className="fixed z-[-10]" // Changed to fixed, adjusted z-index
         style={{
           width: '1500px',
           height: '1500px',

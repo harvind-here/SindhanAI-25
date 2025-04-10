@@ -14,7 +14,8 @@ import { Analytics } from "@vercel/analytics/react"
 function App() {
   return (
     <Router>
-      <div className="App relative overflow-hidden bg-[#1b2131] text-white">
+      {/* Removed bg-[#1b2131] from the main wrapper */}
+      <div className="App relative overflow-hidden text-white"> 
         <Navbar />
         <Routes>
           <Route path="/" element={

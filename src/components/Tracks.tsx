@@ -78,7 +78,7 @@ const Tracks = () => {
   };
 
   return (
-    <section id="Tracks" className="relative bg-[#1b2131] py-24">
+    <section id="Tracks" className="relative py-24 bg-transparent"> {/* Explicitly set transparent background */}
       {/* Pink star wave background */}
       <div className="absolute bottom-0 left-0 right-0 h-40 w-full overflow-hidden">
         {/* <img

@@ -190,13 +190,13 @@ const Speakers = () => {
                   <h3 className="mb-1 text-2xl font-bold text-white md:text-3xl continuous-rainbow-2">Gamaliel Das</h3>
                   <p className="mb-4 text-purple-300"> COO @ CodeHunters | 8x Global Hackathon Winner | SIH 2022 🏆 | 2x TNSI Awardee | SIH 2023, SIH 2024 Evaluator</p>
                   <p className="text-sm leading-relaxed text-gray-200 md:text-base">
-                  <p>🔸 Chief Operating Officer - Codehunters </p>
-                  <p>🔸2x TNSI Innovation Awardee,</p>
-                  <p>🔸 Smart India Hackathon 2022 Champion</p>
-                  <p>🔸 7x State & National Hackathons Champion,</p>
-                  <p>🔸 SIH 2023 & 2024 , Official Evaluator</p>
-                  <p>🔸 45+ National & International hackathons as Judge and mentor,</p>
-                  <p>🔸 Tech content creator with 200k+ Digital following, <a href="https://www.instagram.com/dasandcode/" className="text-blue-400 hover:text-blue-300">dasandcode.</a></p>
+                  <p>We are honored to have Mr. Gamaliel Das, Chief Operating Officer at Codehunters, as the Chief Guest for our hackathon. A distinguished innovator, he is a two-time TNSI Innovation Awardee and the Champion of Smart India Hackathon 2022, with victories in over seven national and state-level hackathons.
+
+Mr. Das has served as an Official Evaluator for Smart India Hackathon 2023 and 2024 and has contributed to 45+ national and international hackathons as a jury member and mentor, actively shaping the future of tech innovation.
+
+He is also a prominent tech content creator, known as @dasandcode, with a digital following of over 200,000, where he shares insights and resources for aspiring technologists.
+
+🔗Instagram – <a href="https://www.instagram.com/dasandcode/" className="text-blue-400 hover:text-blue-300">@dasandcode.</a></p>
                   </p>
                 </div>
               </div>

@@ -76,7 +76,7 @@ const FAQ = () => {
       },
       {
         question: "What are the different tracks or domains covered in the event?",
-        answer: "Sindanai'25 focuses on AI, IoT, Data Analytics. Participants can choose their own problem statement provided their idea comes under tracks(AI or IoT)."
+        answer: "Sindanai'25 focuses on AI, IoT, App Development. Participants can choose their own problem statement provided their idea comes under tracks(AI or IoT)."
       },
       {
         question: " Will there be any prizes or rewards?",
@@ -112,15 +112,15 @@ const FAQ = () => {
       },
       {
         question: "Will participants get access to any development kits or tools?",
-        answer: "Yes, IoT participants will be provided with generic components, if you are planning to use specific component, it is advised to bring it yourself. AI and DataAnalytics participants are provided with systems, If you are planning to train any models, you are advised to bring your own laptop."
+        answer: "Yes, IoT participants will be provided with generic components (the list of available components will be intimated upon selection), if you are planning to use specific component, it is advised to bring it yourself. AI and App Development participants are provided with backup systems, you are advised to bring your own laptop, especially if you are planning to train any models."
       },
       {
         question: "What happens if I face technical difficulties during the event?",
-        answer: "A dedicated support team will be available to assist participants with any issues."
+        answer: "A dedicated support team will be available to assist participants with issues to some extent. However, participants are asked to come prepared."
       },
       {
-        question: " Can we submit projects that have been worked on before?",
-        answer: " No, this is a 24-hour hackathon, and all projects must be developed during the event itself. Unless your prject is in the ideation stage and align with any tracks."
+        question: " Can we submit projects that we completed before?",
+        answer: " No, this is a 24-hour hackathon, and major part of the project must be developed during the event."
       }
     ],
     downloadables: [
