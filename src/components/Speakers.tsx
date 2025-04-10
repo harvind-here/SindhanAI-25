@@ -190,7 +190,13 @@ const Speakers = () => {
                   <h3 className="mb-1 text-2xl font-bold text-white md:text-3xl continuous-rainbow-2">Gamaliel Das</h3>
                   <p className="mb-4 text-purple-300"> COO @ CodeHunters | 8x Global Hackathon Winner | SIH 2022 🏆 | 2x TNSI Awardee | SIH 2023, SIH 2024 Evaluator</p>
                   <p className="text-sm leading-relaxed text-gray-200 md:text-base">
-                  Gamaliel Das is a distinguished Web Development Specialist, currently serving at Spendflo. He is an 8-time Global Hackathon Winner, Smart India Hackathon (SIH) 2022 Champion, and 2-time Tamil Nadu Student Innovator (TNSI) Awardee. His commitment to fostering innovation is evident through his role as an Evaluator for SIH 2023 and SIH 2024. Beyond his professional achievements, Gamaliel has built a substantial digital presence, amassing over 170K+ followers. His journey reflects a dedication to elevating the importance of hackathons in Tamil Nadu and inspiring the next generation of tech enthusiasts. We are excited to have them as our chief guest for SindhanAI'25!
+                  <p>🔸 Chief Operating Officer - Codehunters </p>
+                  <p>🔸2x TNSI Innovation Awardee,</p>
+                  <p>🔸 Smart India Hackathon 2022 Champion</p>
+                  <p>🔸 7x State & National Hackathons Champion,</p>
+                  <p>🔸 SIH 2023 & 2024 , Official Evaluator</p>
+                  <p>🔸 45+ National & International hackathons as Judge and mentor,</p>
+                  <p>🔸 Tech content creator with 200k+ Digital following, <a href="https://www.instagram.com/dasandcode/" className="text-blue-400 hover:text-blue-300">dasandcode.</a></p>
                   </p>
                 </div>
               </div>
