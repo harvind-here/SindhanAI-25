@@ -94,8 +94,8 @@ const Footer = () => {
              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
                 <h4 className="mb-2 font-semibold">Help Desk</h4>
-                <p>Coordinator 1: <a href="tel:8608436242" className="hover:text-purple-300">86084 36242</a></p>
-                <p>Coordinator 2: <a href="tel:6385335417" className="hover:text-purple-300">63853 35417</a></p>
+                <p>Coordinator 1: <a href="tel:+918667795048" className="hover:text-purple-300">+91 86677 95048</a></p>
+                <p>Coordinator 2: <a href="tel:+918608436242" className="hover:text-purple-300">+91 86084 36242</a></p>
                 <p>Official Mail ID: <a href="mailto:info@sindhanai.in" className="hover:text-purple-300">info@sindhanai.in</a></p>
               </div>
               <div>
