@@ -331,7 +331,7 @@ const [ref, inView] = useInView({
       answer: <a href="https://docs.google.com/document/d/1GesVoglTzGEhPA3JENAQTmLbWUKyigds/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download Rulebook</a>
     },
     {
-      question: "PPT Template",
+      question: "Submission Template",
       answer: <a href="https://docs.google.com/presentation/d/1x2rkUV-5AAbOK999FyiKag82aWIemLbZ/edit?usp=sharing&ouid=110539728346982923634&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Download PPT Template</a>
     }
   ];
