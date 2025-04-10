@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
 
           <p className="mt-8 text-sm text-gray-400">
-            Copyright © {currentYear} SRMTRPEC. All rights reserved.
+            Done by Harvind and Esshwar.
           </p>
 
           {/* Hidden credit for clone - comment this out in real production */}

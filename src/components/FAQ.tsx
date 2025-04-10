@@ -108,7 +108,7 @@ const FAQ = () => {
     registration: [
       {
         question: "What is the format for project submissions?",
-        answer: "Participants must submit a PowerPoint presentation (PPT) and a Proof of Concept (PoC) and any supporting document if applicable, which then reviewed for getting shortlisted for the final round."
+        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and a Proof of Concept (PoC) and any supporting document if applicable, which then reviewed for shortlisting for the final round."
       },
       {
         question: "Will participants get access to any development kits or tools?",

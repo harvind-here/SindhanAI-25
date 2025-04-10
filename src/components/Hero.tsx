@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Globe from './Globe';
 // Removed StarBackground import
 
@@ -9,6 +9,7 @@ interface RippleState {
 
 const Hero = () => {
   const texts = ["SindhanAI'25", "சிந்தனை'25", "సింధానై'25", "सिंधनै'25","സിന്ദനായി'25", "ಸಿಂಧನೈ'25"];
+  const heroRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -24,6 +25,8 @@ const Hero = () => {
     { isAnimating: false },
     { isAnimating: false }
   ]);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [isGlobeAnimationComplete, setIsGlobeAnimationComplete] = useState(false);
 
   useEffect(() => {
     const targetDate = new Date('2025-05-02T00:00:00');  // Changed to April 19th, 2025
@@ -165,7 +168,7 @@ const Hero = () => {
           right: '15%',
         }}
       >
-        <Globe />
+        <Globe isAnimationComplete={isGlobeAnimationComplete} />
       </div>
 
       {/* Main content */}

@@ -1,7 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
-const Globe: React.FC = () => {
+interface GlobeProps {
+  isAnimationComplete: boolean;
+}
+
+const Globe: React.FC<GlobeProps> = ({ isAnimationComplete }) => {
   const mountRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<THREE.Mesh>();
   const markerRef = useRef<THREE.Mesh>(); // Ref for the location marker
