@@ -23,6 +23,7 @@ function App() {
               <Hero/>
               <Tracks/>
               <About/>
+              <Analytics />{/* Add the Analytics component here */}
               <Timeline /> {/* Add the Timeline component here */}
               <ProblemStatement/> 
               <Speakers/>
