@@ -9,7 +9,7 @@ import Sponsors from './components/Sponsors';
 import Footer from './components/Footer';
 import ProblemStatement from './components/ProblemStatement';  // Add this import
 import Timeline from './components/Timeline'; // Import the new Timeline component
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
