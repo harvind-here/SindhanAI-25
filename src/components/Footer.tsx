@@ -100,9 +100,9 @@ const Footer = () => {
               </div>
               <div>
                 <h4 className="mb-2 font-semibold">Domain Contacts</h4>
-                <p>AI Domain: <a href="tel:8778814940" className="hover:text-purple-300">87788 14940</a></p>
-                <p>IoT: <a href="tel:6381479202" className="hover:text-purple-300">63814 79202</a></p>
-                <p>App Development: <a href="tel:9488774819" className="hover:text-purple-300">94887 74819</a></p>
+                <p>AI: <a href="tel:+918778814940" className="hover:text-purple-300">87788 14940</a></p>
+                <p>IoT: <a href="tel:+916381479202" className="hover:text-purple-300">63814 79202</a></p>
+                <p>App Development: <a href="tel:+919488774819" className="hover:text-purple-300">94887 74819</a></p>
               </div>
             </div>
           </div>
