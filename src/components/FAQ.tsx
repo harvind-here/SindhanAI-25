@@ -112,7 +112,7 @@ const FAQ = () => {
     registration: [
       {
         question: "What is the format for project submissions?",
-        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and any supporting documents(if any), which then reviewed for shortlisting for the final round. This PPT can be submitted via mail(info@sindhanai.in) or Whatsapp."
+        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and any supporting documents(if any), which then reviewed for shortlisting for the final round. This PPT can be submitted via mail(info@sindhanai.in)."
       },
       {
         question: "Will participants get access to any development kits or tools?",
