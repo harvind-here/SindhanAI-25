@@ -72,7 +72,7 @@ const FAQ = () => {
       },
       {
         question: "Is there any registration fee?",
-        answer: "Registration is free for the first round. However, if you get selected, you will have to pay a participation fee."
+        answer: "Registration is free for the first round. Only upon selection, you will have to pay a participation fee of Rs.500 for the final 24H hackathon."
       },
       {
         question: "What are the different tracks or domains covered in the event?",
@@ -80,13 +80,17 @@ const FAQ = () => {
       },
       {
         question: " Will there be any prizes or rewards?",
-        answer: "Yes! The prize pool for Sindanai'25 is around ₹60,000. Winners will receive cash prizes, certificates, if notable performance observed during hacakthon, one may recieve consolidation prize too."
+        answer: "Yes! The prize pool for Sindanai'25 is around ₹60,000(including all tracks). Winners will receive cash prizes, certificates, if notable performance observed during hacakthon, one may recieve consolidation prize too."
       },
     ],
     tracks: [
       {
+        question: "Is open innovation a seperate track?",
+        answer: "No, open innovation is not a separate track. It is a concept that encourages participants to collaborate and share ideas across different domains. Participants can choose any of the three tracks (AI, IoT, App Development) and are encouraged to think outside the box. Though, the problem statement should be related to the track they choose."
+      },
+      {
         question: "How can I register for Sindanai'25?",
-        answer: "Click the 'Register' button in website, which will direct you to a form, fill it and wait for confirmation mail. Participants can register as a team upto 6 members(including leader)."
+        answer: "Click the 'Register' button in website, which will direct you to a form, fill it and submit your ideation PPT to our MailID (info@sindhanai.in) on/before 28th April. Participants can register as a team upto 6 members(including leader). Note: The first round registration is completely free."
       },
       {
         question: "Can we participate as a team? If yes, what is the team size limit?",
@@ -108,7 +112,7 @@ const FAQ = () => {
     registration: [
       {
         question: "What is the format for project submissions?",
-        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and a Proof of Concept (PoC) and any supporting document if applicable, which then reviewed for shortlisting for the final round."
+        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and any supporting documents(if any), which then reviewed for shortlisting for the final round. This PPT can be submitted via mail(info@sindhanai.in) or Whatsapp."
       },
       {
         question: "Will participants get access to any development kits or tools?",
@@ -119,8 +123,8 @@ const FAQ = () => {
         answer: "A dedicated support team will be available to assist participants with issues to some extent. However, participants are asked to come prepared."
       },
       {
-        question: " Can we submit projects that we completed before?",
-        answer: " No, this is a 24-hour hackathon, and major part of the project must be developed during the event."
+        question: "When can I pay the Participation fee?",
+        answer: "Upon selection, you will receive a confirmation email with the payment link. The fee must be paid before the final round(on or before May 1st)."
       }
     ],
     downloadables: [
@@ -136,10 +140,10 @@ const FAQ = () => {
     logistics: [
       {
         question: "Can I attend SindhanAI virtually?",
-        answer: "Unfortunately, SindhanAI is only offered in-person to provide the best collaborative AI learning experience. However, the first round is online, so you can participate from anywhere."
+        answer: "Unfortunately, SindhanAI is only offered in-person to provide the best collaborative AI learning experience. However, the first round is online, so you can register and submit your idea from anywhere."
       },
       {
-        question: "Will food be provided?",
+        question: "Will food be provided? What the Rs.500 fee is for?",
         answer: "Yes, Participants will be provided with refreshments/snacks from time to time at free of cost. Besides that, food stalls and cafeterias will be made available for breakfast, lunch and dinner."
       },
       {

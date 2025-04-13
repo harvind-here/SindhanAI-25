@@ -10,7 +10,7 @@ export default function Timeline() {
   const timelineEvents = [
     {
       id: 1,
-      date: "April 7-27, 2025",
+      date: "April 7-28, 2025",
       title: "Abstract Submission & Pitch Deck",
       description:
         "Submit your innovative ideas and finalize your pitch deck for SindhanAI'25. Our team will review all submissions for the next phase.",
@@ -19,17 +19,17 @@ export default function Timeline() {
     },
     {
       id: 2,
-      date: "April 27, 2025",
+      date: "April 28, 2025",
       title: "Selection Notification",
       description:
-        "Selected teams will receive an official email confirmation. Only shortlisted teams will proceed to the registration phase.",
+        "Selected teams will receive an official email confirmation on or before 28th april. Only shortlisted teams will proceed to the final 24H Hackathon round.",
       icon: <Mail className="h-6 w-6 text-white" />,
       color: "from-[#e76f51] to-[#9d4edd]",
     },
     {
       id: 3,
       date: "April 24-May 1, 2025",
-      title: "Registration & Payment",
+      title: "Payment and comfirmation",
       description:
         "Selected teams must complete registration and pay ₹500 per participant to confirm their spot in the hackathon.",
       icon: <CreditCard className="h-6 w-6 text-white" />,
@@ -204,7 +204,7 @@ export default function Timeline() {
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Submit & Get Selected</h4>
               <p className="text-gray-300">
-                Submit your abstract and pitch deck by April 27th. Our panel will review and select the most promising
+                Submit your abstract and pitch deck by April 28th. Our panel will review and select the most promising
                 teams.
               </p>
             </div>

@@ -273,6 +273,7 @@ const Hero = () => {
               </span>
             </a>
           </div>
+          <p className="mt-4 text-sm md:text-base text-yellow-300">*Last date to register and submit abstract is 28th April</p>
         </motion.div>
       </div>
     </section>
