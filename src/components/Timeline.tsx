@@ -29,7 +29,7 @@ export default function Timeline() {
     {
       id: 3,
       date: "April 26-May 1, 2025",
-      title: "Payment and comfirmation",
+      title: "Payment and confirmation",
       description:
         "Selected teams must complete registration and pay ₹500 per participant to confirm their spot in the hackathon.",
       icon: <CreditCard className="h-6 w-6 text-white" />,
