@@ -76,7 +76,7 @@ const FAQ = () => {
       },
       {
         question: "What are the different tracks or domains covered in the event?",
-        answer: "Sindanai'25 focuses on AI, IoT, App Development. Participants can choose their own problem statement provided their idea comes under tracks(AI or IoT)."
+        answer: "Sindanai'25 focuses on AI, IoT, App Development. Participants can choose their own problem statement provided their idea comes under tracks(AI or AppDev or IoT)."
       },
       {
         question: " Will there be any prizes or rewards?",
