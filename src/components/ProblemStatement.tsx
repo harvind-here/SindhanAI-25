@@ -394,7 +394,7 @@ const [ref, inView] = useInView({
             <div className="rounded-xl bg-[#2a2e43]/60 p-6 backdrop-blur-sm md:p-8">
               <ProblemItem 
                 title="Open Innovation" 
-                description="Dont find any problem statements that excites you?!, Dont worry, we are open to innovative solutions that address real-world challenges. Your approach should come under atleast one among the mentioned domains( AI | IoT ). Projects will be judged on creativity, impact, and technical implementation." 
+                description="Dont find any problem statements that excites you?!, Dont worry, we are open to innovative solutions that address real-world challenges. Your approach should come under atleast one among the mentioned domains( AI | IoT | AppDev). Projects will be judged on creativity, impact, and technical implementation." 
               />
             </div>
           </div>
