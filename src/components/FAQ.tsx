@@ -90,7 +90,7 @@ const FAQ = () => {
       },
       {
         question: "How can I register for Sindanai'25?",
-        answer: "Click the 'Register' button in website, which will direct you to a form, fill it and submit your ideation PPT to our MailID (info@sindhanai.in) on/before 27th April. Participants can register as a team upto 6 members(including leader). Note: The first round registration is completely free."
+        answer: "Click the 'Register' button in website, which will direct you to a form, fill it and submit your ideation PPT to our MailID (srmsindhanai.25@gmail.com) on/before 27th April. Participants can register as a team upto 6 members(including leader). Note: The first round registration is completely free."
       },
       {
         question: "Can we participate as a team? If yes, what is the team size limit?",
@@ -112,7 +112,7 @@ const FAQ = () => {
     registration: [
       {
         question: "What is the format for project submissions?",
-        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and any supporting documents(if any), which then reviewed for shortlisting for the final round. This PPT can be submitted via mail(info@sindhanai.in)."
+        answer: "Yes, Participants must submit a PowerPoint presentation (PPT) as per the template given in downloadables section and any supporting documents(if any), which then reviewed for shortlisting for the final round. This PPT can be submitted via mail(srmsindhanai.25@gmail.com)."
       },
       {
         question: "Will participants get access to any development kits or tools?",

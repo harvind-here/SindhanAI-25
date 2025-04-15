@@ -96,7 +96,7 @@ const Footer = () => {
                 <h4 className="mb-2 font-semibold">Help Desk</h4>
                 <p>Coordinator 1: <a href="tel:+918667795048" className="hover:text-purple-300">+91 86677 95048</a></p>
                 <p>Coordinator 2: <a href="tel:+918608436242" className="hover:text-purple-300">+91 86084 36242</a></p>
-                <p>Official Mail ID: <a href="mailto:info@sindhanai.in" className="hover:text-purple-300">info@sindhanai.in</a></p>
+                <p>Official Mail ID: <a href="mailto:srmsindhanai.25@gmail.com" className="hover:text-purple-300">srmsindhanai.25@gmail.com</a></p>
               </div>
               <div>
                 <h4 className="mb-2 font-semibold">Domain Contacts</h4>
