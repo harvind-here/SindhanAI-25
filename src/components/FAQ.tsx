@@ -94,7 +94,7 @@ const FAQ = () => {
       },
       {
         question: "Can we participate as a team? If yes, what is the team size limit?",
-        answer: "Yes, team participation is allowed. The team size should be between 4 to 6 members."
+        answer: "Yes, team participation is allowed. The team size should be between 4 to 6 members"
       },
       {
         question: "What is the mode of the event? Will it be online or offline?",
