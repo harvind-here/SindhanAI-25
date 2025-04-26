@@ -24,7 +24,7 @@ function App() {
               <Tracks/>
               <About/>
               <Analytics />{/* Add the Analytics component here */}
-              <Timeline /> {/* Add the Timeline component here */}
+              {/* <Timeline />*/}
               <ProblemStatement/> 
               <Speakers/>
               <Sponsors/>
