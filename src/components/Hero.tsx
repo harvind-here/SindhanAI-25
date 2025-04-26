@@ -260,7 +260,7 @@ const Hero = () => {
               rel="noreferrer"
               className="register-button group relative overflow-hidden rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-12 py-4 text-xl font-semibold text-white before:absolute before:left-[-100%] before:top-0 before:h-full before:w-[120%] before:animate-shine before:bg-[linear-gradient(120deg,transparent_10%,rgba(255,255,255,0.5)_30%,transparent_50%)] before:content-[''] after:absolute after:left-[-100%] after:top-0 after:h-full after:w-[120%] after:bg-[linear-gradient(120deg,transparent_10%,rgba(255,255,255,0.8)_30%,transparent_50%)] after:opacity-0 after:content-[''] hover:after:animate-hover-shine hover:scale-105 transition-all duration-300 ease-in-out md:text-2xl md:px-16 md:py-5"
             >
-              <span className="relative z-10">Register for Free</span>
+              <span className="relative z-10">Registration Closed!</span>
               <span className="group-hover:border-rainbow absolute inset-0 rounded-full overflow-hidden">
                 {/* Top border */}
                 <span className="absolute top-0 left-0 w-full h-[6px] bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 -translate-x-full group-hover:animate-rainbow-border-top"></span>
@@ -273,7 +273,7 @@ const Hero = () => {
               </span>
             </a>
           </div>
-          <p className="mt-4 text-sm md:text-base text-yellow-300">*Last date to register and submit abstract is 27th April</p>
+          <p className="mt-4 text-sm md:text-base text-yellow-300">*Excited to see you on May2nd</p>
         </motion.div>
       </div>
     </section>
