@@ -280,4 +280,3 @@ const Hero = () => {
 };
 
 export default Hero;
-/* Timeline will be rendered after About in App, not in Hero */
