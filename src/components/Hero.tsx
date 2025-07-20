@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState, useRef, useCallback } from 'react'; // Added useCallback
 import Globe from './Globe';
+// Removed Timeline import
 
 interface RippleState {
   isAnimating: boolean;
@@ -14,6 +15,7 @@ const Hero = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  // Countdown is now fixed to 0
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -27,26 +29,23 @@ const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isGlobeAnimationComplete, setIsGlobeAnimationComplete] = useState(false);
 
-  useEffect(() => {
-    const targetDate = new Date('2025-05-02T00:00:00');  // Changed to April 19th, 2025
-
-    const interval = setInterval(() => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
-
-      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setDays(d);
-      setHours(h);
-      setMinutes(m);
-      setSeconds(s);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  // Remove countdown effect
+  // useEffect(() => {
+  //   const targetDate = new Date('2025-05-02T00:00:00');
+  //   const interval = setInterval(() => {
+  //     const now = new Date();
+  //     const difference = targetDate.getTime() - now.getTime();
+  //     const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+  //     const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //     const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  //     const s = Math.floor((difference % (1000 * 60)) / 1000);
+  //     setDays(d);
+  //     setHours(h);
+  //     setMinutes(m);
+  //     setSeconds(s);
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   // Effect for text transformation (typing/backspacing)
   useEffect(() => {
@@ -281,3 +280,4 @@ const Hero = () => {
 };
 
 export default Hero;
+/* Timeline will be rendered after About in App, not in Hero */
